@@ -4,7 +4,7 @@ Trayectorias de los contratistas de prestación de servicios del Estado colombia
 
 Proyecto final de Machine Learning, Matemáticas Aplicadas y Ciencias de la Computación, Universidad del Rosario.
 
-**Simulador:** [`simulador/index.html`](simulador/index.html). Escribes cuántos meses al año tienes contrato y te dice a qué edad completarías las semanas que exige Colpensiones.
+**Simulador en línea:** https://jhonsr17.github.io/contratistas-secop-pension/simulador/ (código en [`simulador/index.html`](simulador/index.html)). Escribes cuántos meses al año tienes contrato y te dice a qué edad completarías las semanas que exige Colpensiones.
 
 ---
 
