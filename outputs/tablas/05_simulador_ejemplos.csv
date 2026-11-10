@@ -1,0 +1,4 @@
+ejemplo,meses_por_anio,honorario_mensual,semanas_actuales,edad_actual,genero,semanas_requeridas,semanas_por_anio,ibc,aporte_pension_mensual,cotiza_sobre_minimo,semanas_que_faltan,anios_que_faltan,edad_a_la_que_llega,edad_legal,llega_antes_de_edad_legal,edad_probable_de_pension,semanas_a_la_edad_legal,meses_por_anio_necesarios_para_llegar_a_tiempo,cluster_mas_probable,edad_a_la_que_llega_si_1300,llega_a_tiempo_si_1300
+Profesional con contrato casi todo el año,11.0,5000000,150,28,Mujer,1000,47.8,2000000,320000,False,850,17.8,45.8,57,True,57.0,1000.0,6.7,Estables,52.0,True
+Apoyo a la gestión con huecos entre contratos,6.5,2200000,0,25,Hombre,1300,28.3,1423500,227760,True,1300,46.0,71.0,62,False,71.0,1045.7,8.1,Intermitentes,71.0,False
+Contratista ocasional (un contrato corto al año),3.0,3000000,100,30,Mujer,1000,13.0,1423500,227760,True,900,69.0,99.0,57,False,99.0,452.2,7.7,Ocasionales,122.0,False

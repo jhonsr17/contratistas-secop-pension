@@ -1,0 +1,162 @@
+{
+  "descripcion": "Tres trayectorias de SECOP II (2022–2025), anonimizadas con k ≥ 10: al menos 10 contratistas comparten exactamente la firma publicada. Sin entidad, id, fechas, departamento ni objeto. Meses redondeados al mes (mínimo 1 si hubo contrato); contratos por año con tope 2 (\"2\" significa 2 o más); honorario mensual mediano redondeado a $500.000. Semanas exigidas: 1.300 hombres, 1.000 mujeres (C-197 de 2023).",
+  "k_minimo": 10,
+  "casos": [
+    {
+      "caso": 1,
+      "tipo": "trayectoria real anonimizada",
+      "cluster": "Estables",
+      "genero": "Mujer",
+      "anios_con_contrato_2022_2025": 4,
+      "meses_cubiertos_por_anio": {
+        "2022": 12,
+        "2023": 12,
+        "2024": 12,
+        "2025": 2
+      },
+      "contratos_por_anio": {
+        "2022": 2,
+        "2023": 2,
+        "2024": 1,
+        "2025": 1
+      },
+      "honorario_mensual_redondeado": 4000000,
+      "meses_por_anio_promedio": 9.5,
+      "referencia_cluster": {
+        "mediana_meses_por_anio": 9.34,
+        "mediana_honorario_redondeada": 4100000,
+        "criterio_presencia": "al menos 3 de 4 años",
+        "pct_del_cluster_que_cumple_presencia": 0.718
+      },
+      "personas_con_la_misma_firma_redondeada": 10,
+      "proyeccion_simulador": {
+        "semanas_requeridas": 1000,
+        "semanas_por_anio": 41.3,
+        "ibc": 1600000,
+        "aporte_pension_mensual": 256000,
+        "cotiza_sobre_minimo": false,
+        "semanas_que_faltan": 1000,
+        "anios_que_faltan": 24.2,
+        "edad_a_la_que_llega": 49.2,
+        "edad_legal": 57,
+        "llega_antes_de_edad_legal": true,
+        "edad_probable_de_pension": 57,
+        "semanas_a_la_edad_legal": 1000,
+        "meses_por_anio_necesarios_para_llegar_a_tiempo": 7.2,
+        "cluster_mas_probable": "Estables",
+        "probabilidad_cluster": {
+          "Estables": 0.826,
+          "Intermitentes": 0.158,
+          "Multientidad": 0.016,
+          "Ocasionales": 0.0
+        },
+        "supuesto": "mismo ritmo desde los 25 años, sin semanas previas"
+      },
+      "proyeccion_si_1300_semanas": 56.5
+    },
+    {
+      "caso": 2,
+      "tipo": "trayectoria real anonimizada",
+      "cluster": "Intermitentes",
+      "genero": "Mujer",
+      "anios_con_contrato_2022_2025": 3,
+      "meses_cubiertos_por_anio": {
+        "2022": 11,
+        "2023": 11,
+        "2024": 1,
+        "2025": 0
+      },
+      "contratos_por_anio": {
+        "2022": 2,
+        "2023": 2,
+        "2024": 1,
+        "2025": 0
+      },
+      "honorario_mensual_redondeado": 3000000,
+      "meses_por_anio_promedio": 5.75,
+      "referencia_cluster": {
+        "mediana_meses_por_anio": 5.79,
+        "mediana_honorario_redondeada": 3000000,
+        "criterio_presencia": "al menos 3 de 4 años",
+        "pct_del_cluster_que_cumple_presencia": 0.278
+      },
+      "personas_con_la_misma_firma_redondeada": 18,
+      "proyeccion_simulador": {
+        "semanas_requeridas": 1000,
+        "semanas_por_anio": 25.0,
+        "ibc": 1423500,
+        "aporte_pension_mensual": 227760,
+        "cotiza_sobre_minimo": true,
+        "semanas_que_faltan": 1000,
+        "anios_que_faltan": 40.0,
+        "edad_a_la_que_llega": 65.0,
+        "edad_legal": 57,
+        "llega_antes_de_edad_legal": false,
+        "edad_probable_de_pension": 65.0,
+        "semanas_a_la_edad_legal": 800.1,
+        "meses_por_anio_necesarios_para_llegar_a_tiempo": 7.2,
+        "cluster_mas_probable": "Intermitentes",
+        "probabilidad_cluster": {
+          "Intermitentes": 0.477,
+          "Estables": 0.388,
+          "Ocasionales": 0.126,
+          "Multientidad": 0.008
+        },
+        "supuesto": "mismo ritmo desde los 25 años, sin semanas previas"
+      },
+      "proyeccion_si_1300_semanas": 77.0
+    },
+    {
+      "caso": 3,
+      "tipo": "trayectoria real anonimizada",
+      "cluster": "Ocasionales",
+      "genero": "Mujer",
+      "anios_con_contrato_2022_2025": 2,
+      "meses_cubiertos_por_anio": {
+        "2022": 3,
+        "2023": 7,
+        "2024": 0,
+        "2025": 0
+      },
+      "contratos_por_anio": {
+        "2022": 1,
+        "2023": 1,
+        "2024": 0,
+        "2025": 0
+      },
+      "honorario_mensual_redondeado": 3500000,
+      "meses_por_anio_promedio": 2.5,
+      "referencia_cluster": {
+        "mediana_meses_por_anio": 2.61,
+        "mediana_honorario_redondeada": 3300000,
+        "criterio_presencia": "al menos 2 de 4 años",
+        "pct_del_cluster_que_cumple_presencia": 0.33
+      },
+      "personas_con_la_misma_firma_redondeada": 10,
+      "proyeccion_simulador": {
+        "semanas_requeridas": 1000,
+        "semanas_por_anio": 10.9,
+        "ibc": 1423500,
+        "aporte_pension_mensual": 227760,
+        "cotiza_sobre_minimo": true,
+        "semanas_que_faltan": 1000,
+        "anios_que_faltan": 92.0,
+        "edad_a_la_que_llega": 117.0,
+        "edad_legal": 57,
+        "llega_antes_de_edad_legal": false,
+        "edad_probable_de_pension": 117.0,
+        "semanas_a_la_edad_legal": 347.9,
+        "meses_por_anio_necesarios_para_llegar_a_tiempo": 7.2,
+        "cluster_mas_probable": "Ocasionales",
+        "probabilidad_cluster": {
+          "Ocasionales": 0.576,
+          "Intermitentes": 0.412,
+          "Estables": 0.012,
+          "Multientidad": 0.0
+        },
+        "supuesto": "mismo ritmo desde los 25 años, sin semanas previas"
+      },
+      "proyeccion_si_1300_semanas": 144.6
+    }
+  ]
+}

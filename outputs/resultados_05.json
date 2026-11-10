@@ -1,0 +1,780 @@
+{
+  "supuestos": {
+    "edad_inicio": 25,
+    "edad_legal": {
+      "Hombre": 62,
+      "Mujer": 57
+    },
+    "semanas_exigidas_principal": {
+      "Hombre": 1300,
+      "Mujer": 1000
+    },
+    "semanas_exigidas_sensibilidad": {
+      "Hombre": 1300,
+      "Mujer": 1300
+    },
+    "fuente_semanas_mujeres": "Sentencia C-197 de 2023 (Corte Constitucional): 1.250 en 2026, -25 por año, 1.000 desde 2036",
+    "semanas_por_anio_requeridas": {
+      "Hombre": 35.13513513513514,
+      "Mujer": 31.25
+    },
+    "meses_por_anio_requeridos": {
+      "Hombre": 8.080359620400689,
+      "Mujer": 7.186858316221766
+    },
+    "semanas_por_anio_requeridas_sensibilidad": {
+      "Hombre": 35.13513513513514,
+      "Mujer": 40.625
+    },
+    "meses_por_anio_requeridos_sensibilidad": {
+      "Hombre": 8.080359620400689,
+      "Mujer": 9.342915811088297
+    },
+    "medida_de_ritmo": "semanas_por_anio_obs = dias con contrato 2022-2025 / 7 / anios observables (notebook 03)"
+  },
+  "por_cluster": {
+    "Estables": {
+      "personas": 249680.0,
+      "personas_con_genero": 180686.0,
+      "semanas_anio_p25": 33.666666666666664,
+      "semanas_anio_mediana": 40.57142857142857,
+      "semanas_anio_p75": 45.357142857142854,
+      "anios_1300_p25": 28.661417322834648,
+      "anios_1300_mediana": 32.04225352112676,
+      "anios_1300_p75": 38.613861386138616,
+      "edad_llega_1300_mediana": 57.04225352112676,
+      "anios_requisito_p25": 23.870417732310315,
+      "anios_requisito_mediana": 28.688524590163937,
+      "anios_requisito_p75": 33.898305084745765,
+      "edad_llega_mediana": 53.68852459016394,
+      "pct_llega_a_tiempo": 0.7727881518213918,
+      "pct_llega_a_tiempo_1300_todos": 0.5795302347719248,
+      "pct_no_llega_ni_a_80": 0.01114087422379155,
+      "semanas_a_edad_legal_mediana": 1000.0
+    },
+    "Multientidad": {
+      "personas": 55872.0,
+      "personas_con_genero": 39161.0,
+      "semanas_anio_p25": 26.285714285714285,
+      "semanas_anio_mediana": 37.75,
+      "semanas_anio_p75": 45.17857142857143,
+      "anios_1300_p25": 28.77470355731225,
+      "anios_1300_mediana": 34.437086092715234,
+      "anios_1300_p75": 49.45652173913044,
+      "edad_llega_1300_mediana": 59.437086092715234,
+      "anios_requisito_p25": 25.85410895660203,
+      "anios_requisito_mediana": 31.433506044905013,
+      "anios_requisito_p75": 43.81846635367762,
+      "edad_llega_mediana": 56.433506044905016,
+      "pct_llega_a_tiempo": 0.6030234161538265,
+      "pct_llega_a_tiempo_1300_todos": 0.46275631367942593,
+      "pct_no_llega_ni_a_80": 0.16261076070580424,
+      "semanas_a_edad_legal_mediana": 1000.0
+    },
+    "Intermitentes": {
+      "personas": 184455.0,
+      "personas_con_genero": 161173.0,
+      "semanas_anio_p25": 18.857142857142858,
+      "semanas_anio_mediana": 25.178571428571427,
+      "semanas_anio_p75": 33.392857142857146,
+      "anios_1300_p25": 38.93048128342246,
+      "anios_1300_mediana": 51.63120567375887,
+      "anios_1300_p75": 68.93939393939394,
+      "edad_llega_1300_mediana": 76.63120567375887,
+      "anios_requisito_p25": 33.333333333333336,
+      "anios_requisito_mediana": 43.81846635367762,
+      "anios_requisito_p75": 60.86956521739131,
+      "edad_llega_mediana": 68.81846635367762,
+      "pct_llega_a_tiempo": 0.27207410670521737,
+      "pct_llega_a_tiempo_1300_todos": 0.1385467789269915,
+      "pct_no_llega_ni_a_80": 0.316895509793824,
+      "semanas_a_edad_legal_mediana": 877.4285714285714
+    },
+    "Ocasionales": {
+      "personas": 358260.0,
+      "personas_con_genero": 316546.0,
+      "semanas_anio_p25": 6.190476190476191,
+      "semanas_anio_mediana": 11.357142857142858,
+      "semanas_anio_p75": 17.428571428571427,
+      "anios_1300_p25": 74.59016393442623,
+      "anios_1300_mediana": 114.46540880503144,
+      "anios_1300_p75": 210.0,
+      "edad_llega_1300_mediana": 139.46540880503144,
+      "anios_requisito_p25": 63.06306306306306,
+      "anios_requisito_mediana": 101.08303249097473,
+      "anios_requisito_p75": 185.43046357615893,
+      "edad_llega_mediana": 126.08303249097473,
+      "pct_llega_a_tiempo": 0.02439771786722941,
+      "pct_llega_a_tiempo_1300_todos": 0.0059327870198960025,
+      "pct_no_llega_ni_a_80": 0.8208412047538115,
+      "semanas_a_edad_legal_mediana": 381.7142857142857
+    },
+    "Total": {
+      "personas": 848267.0,
+      "personas_con_genero": 697566.0,
+      "semanas_anio_p25": 11.928571428571429,
+      "semanas_anio_mediana": 23.857142857142858,
+      "semanas_anio_p75": 37.42857142857143,
+      "anios_1300_p25": 34.732824427480914,
+      "anios_1300_mediana": 54.49101796407186,
+      "anios_1300_p75": 108.98203592814372,
+      "edad_llega_1300_mediana": 79.49101796407186,
+      "anios_requisito_p25": 31.379310344827584,
+      "anios_requisito_mediana": 49.645390070921984,
+      "anios_requisito_p75": 100.0,
+      "edad_llega_mediana": 74.64539007092199,
+      "pct_llega_a_tiempo": 0.30795795666646597,
+      "pct_llega_a_tiempo_1300_todos": 0.2107943907816608,
+      "pct_no_llega_ni_a_80": 0.4577201297081566,
+      "semanas_a_edad_legal_mediana": 778.2857142857143
+    }
+  },
+  "por_cluster_y_genero": {
+    "Estables | Hombre": {
+      "personas": 76651.0,
+      "semanas_anio_mediana": 40.142857142857146,
+      "semanas_exigidas": 1300.0,
+      "anios_requisito_mediana": 32.38434163701067,
+      "edad_llega_mediana": 57.38434163701067,
+      "edad_legal": 62.0,
+      "brecha_mediana_vs_edad_legal": -4.615658362989329,
+      "pct_llega_a_tiempo": 0.6941592412362526,
+      "pct_llega_a_tiempo_1300_todos": 0.6941592412362526,
+      "semanas_a_edad_legal_mediana": 1300.0
+    },
+    "Estables | Mujer": {
+      "personas": 104035.0,
+      "semanas_anio_mediana": 40.5,
+      "semanas_exigidas": 1000.0,
+      "anios_requisito_mediana": 24.691358024691358,
+      "edad_llega_mediana": 49.691358024691354,
+      "edad_legal": 57.0,
+      "brecha_mediana_vs_edad_legal": -7.308641975308646,
+      "pct_llega_a_tiempo": 0.8307204306243091,
+      "pct_llega_a_tiempo_1300_todos": 0.49507377324938723,
+      "semanas_a_edad_legal_mediana": 1000.0
+    },
+    "Multientidad | Hombre": {
+      "personas": 18719.0,
+      "semanas_anio_mediana": 36.714285714285715,
+      "semanas_exigidas": 1300.0,
+      "anios_requisito_mediana": 35.40856031128405,
+      "edad_llega_mediana": 60.40856031128405,
+      "edad_legal": 62.0,
+      "brecha_mediana_vs_edad_legal": -1.5914396887159512,
+      "pct_llega_a_tiempo": 0.5471446124258774,
+      "pct_llega_a_tiempo_1300_todos": 0.5471446124258774,
+      "semanas_a_edad_legal_mediana": 1300.0
+    },
+    "Multientidad | Mujer": {
+      "personas": 20442.0,
+      "semanas_anio_mediana": 37.035714285714285,
+      "semanas_exigidas": 1000.0,
+      "anios_requisito_mediana": 27.000964320154292,
+      "edad_llega_mediana": 52.000964320154296,
+      "edad_legal": 57.0,
+      "brecha_mediana_vs_edad_legal": -4.999035679845704,
+      "pct_llega_a_tiempo": 0.6541923490852167,
+      "pct_llega_a_tiempo_1300_todos": 0.38548087271304177,
+      "semanas_a_edad_legal_mediana": 1000.0
+    },
+    "Intermitentes | Hombre": {
+      "personas": 71895.0,
+      "semanas_anio_mediana": 25.607142857142858,
+      "semanas_exigidas": 1300.0,
+      "anios_requisito_mediana": 50.767085076708504,
+      "edad_llega_mediana": 75.7670850767085,
+      "edad_legal": 62.0,
+      "brecha_mediana_vs_edad_legal": 13.767085076708497,
+      "pct_llega_a_tiempo": 0.20966687530426317,
+      "pct_llega_a_tiempo_1300_todos": 0.20966687530426317,
+      "semanas_a_edad_legal_mediana": 947.4642857142858
+    },
+    "Intermitentes | Mujer": {
+      "personas": 89278.0,
+      "semanas_anio_mediana": 25.607142857142858,
+      "semanas_exigidas": 1000.0,
+      "anios_requisito_mediana": 39.05160390516039,
+      "edad_llega_mediana": 64.05160390516039,
+      "edad_legal": 57.0,
+      "brecha_mediana_vs_edad_legal": 7.051603905160391,
+      "pct_llega_a_tiempo": 0.32233024933354243,
+      "pct_llega_a_tiempo_1300_todos": 0.08127422209278881,
+      "semanas_a_edad_legal_mediana": 819.4285714285714
+    },
+    "Ocasionales | Hombre": {
+      "personas": 141028.0,
+      "semanas_anio_mediana": 11.428571428571429,
+      "semanas_exigidas": 1300.0,
+      "anios_requisito_mediana": 113.75,
+      "edad_llega_mediana": 138.75,
+      "edad_legal": 62.0,
+      "brecha_mediana_vs_edad_legal": 76.75,
+      "pct_llega_a_tiempo": 0.013316504523924327,
+      "pct_llega_a_tiempo_1300_todos": 0.013316504523924327,
+      "semanas_a_edad_legal_mediana": 422.8571428571429
+    },
+    "Ocasionales | Mujer": {
+      "personas": 175518.0,
+      "semanas_anio_mediana": 11.285714285714285,
+      "semanas_exigidas": 1000.0,
+      "anios_requisito_mediana": 88.60759493670886,
+      "edad_llega_mediana": 113.60759493670886,
+      "edad_legal": 57.0,
+      "brecha_mediana_vs_edad_legal": 56.607594936708864,
+      "pct_llega_a_tiempo": 0.03330142777378958,
+      "pct_llega_a_tiempo_1300_todos": 0.0,
+      "semanas_a_edad_legal_mediana": 361.1428571428571
+    },
+    "Total | Hombre": {
+      "personas": 308293.0,
+      "semanas_anio_mediana": 22.571428571428573,
+      "semanas_exigidas": 1300.0,
+      "anios_requisito_mediana": 57.59493670886076,
+      "edad_llega_mediana": 82.59493670886076,
+      "edad_legal": 62.0,
+      "brecha_mediana_vs_edad_legal": 20.594936708860757,
+      "pct_llega_a_tiempo": 0.26079735835714724,
+      "pct_llega_a_tiempo_1300_todos": 0.26079735835714724,
+      "semanas_a_edad_legal_mediana": 835.1428571428572
+    },
+    "Total | Mujer": {
+      "personas": 389273.0,
+      "semanas_anio_mediana": 22.928571428571427,
+      "semanas_exigidas": 1000.0,
+      "anios_requisito_mediana": 43.613707165109034,
+      "edad_llega_mediana": 68.61370716510903,
+      "edad_legal": 57.0,
+      "brecha_mediana_vs_edad_legal": 11.613707165109034,
+      "pct_llega_a_tiempo": 0.34530779170402265,
+      "pct_llega_a_tiempo_1300_todos": 0.17119348118158723,
+      "semanas_a_edad_legal_mediana": 733.7142857142857
+    }
+  },
+  "escenarios_genero_pct_a_tiempo": {
+    "Principal (H 1.300 · M 1.000)": {
+      "Hombres": 0.26079735835714724,
+      "Mujeres": 0.34530779170402265,
+      "brecha_mujeres_menos_hombres_pp": 8.451043334687542
+    },
+    "Sensibilidad (1.300 para todos)": {
+      "Hombres": 0.26079735835714724,
+      "Mujeres": 0.17119348118158723,
+      "brecha_mujeres_menos_hombres_pp": -8.960387717556001
+    }
+  },
+  "pct_todos_supera_umbral": {
+    "Hombre": 0.2926000893586571,
+    "Mujer": 0.3659732136225976,
+    "Mujer_con_1300": 0.19028678470340116
+  },
+  "por_decil_riesgo": {
+    "1": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.056942534932912424,
+      "personas_con_genero": 41492.0,
+      "semanas_anio_p25": 8.714285714285714,
+      "semanas_anio_mediana": 15.892857142857142,
+      "semanas_anio_p75": 24.785714285714285,
+      "anios_1300_p25": 52.449567723342945,
+      "anios_1300_mediana": 81.79775280898876,
+      "anios_1300_p75": 149.18032786885246,
+      "edad_llega_1300_mediana": 106.79775280898876,
+      "anios_requisito_p25": 48.19277108433735,
+      "anios_requisito_mediana": 76.08695652173914,
+      "anios_requisito_p75": 134.05780469287947,
+      "edad_llega_mediana": 101.08695652173914,
+      "pct_llega_a_tiempo": 0.05429962402390822,
+      "pct_llega_a_tiempo_1300_todos": 0.01383399209486166,
+      "pct_no_llega_ni_a_80": 0.6693338474886725,
+      "semanas_a_edad_legal_mediana": 507.42857142857144,
+      "pct_Estables": 0.1168062771710317,
+      "pct_Multientidad": 0.016286714028204856,
+      "pct_Intermitentes": 0.22932880924610327,
+      "pct_Ocasionales": 0.6375781995546602
+    },
+    "2": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.11147397004377521,
+      "personas_con_genero": 40162.0,
+      "semanas_anio_p25": 16.857142857142858,
+      "semanas_anio_mediana": 25.464285714285715,
+      "semanas_anio_p75": 31.892857142857142,
+      "anios_1300_p25": 40.76147816349384,
+      "anios_1300_mediana": 51.05189340813464,
+      "anios_1300_p75": 77.11864406779661,
+      "edad_llega_1300_mediana": 76.05189340813465,
+      "anios_requisito_p25": 35.237173281703775,
+      "anios_requisito_mediana": 46.017699115044245,
+      "anios_requisito_p75": 70.70707070707071,
+      "edad_llega_mediana": 71.01769911504425,
+      "pct_llega_a_tiempo": 0.21448135053035208,
+      "pct_llega_a_tiempo_1300_todos": 0.0802499875504208,
+      "pct_no_llega_ni_a_80": 0.37366167023554603,
+      "semanas_a_edad_legal_mediana": 846.8571428571429,
+      "pct_Estables": 0.21984943272187468,
+      "pct_Multientidad": 0.03995334535044004,
+      "pct_Intermitentes": 0.3573109956526349,
+      "pct_Ocasionales": 0.38288622627505037
+    },
+    "3": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.17274157753283817,
+      "personas_con_genero": 41328.0,
+      "semanas_anio_p25": 19.642857142857142,
+      "semanas_anio_mediana": 28.928571428571427,
+      "semanas_anio_p75": 36.035714285714285,
+      "anios_1300_p25": 36.07532210109019,
+      "anios_1300_mediana": 44.93827160493827,
+      "anios_1300_p75": 66.18181818181819,
+      "edad_llega_1300_mediana": 69.93827160493828,
+      "anios_requisito_p25": 31.81818181818182,
+      "anios_requisito_mediana": 40.30710172744722,
+      "anios_requisito_p75": 59.57446808510639,
+      "edad_llega_mediana": 65.30710172744722,
+      "pct_llega_a_tiempo": 0.3410762679055362,
+      "pct_llega_a_tiempo_1300_todos": 0.1649003097173829,
+      "pct_no_llega_ni_a_80": 0.28694831591173053,
+      "semanas_a_edad_legal_mediana": 966.0297619047619,
+      "pct_Estables": 0.2629625702470576,
+      "pct_Multientidad": 0.049878061711377375,
+      "pct_Intermitentes": 0.39541936167956737,
+      "pct_Ocasionales": 0.29174000636199765
+    },
+    "4": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.24510662474727807,
+      "personas_con_genero": 41261.0,
+      "semanas_anio_p25": 19.642857142857142,
+      "semanas_anio_mediana": 30.75,
+      "semanas_anio_p75": 38.42857142857143,
+      "anios_1300_p25": 33.82899628252788,
+      "anios_1300_mediana": 42.27642276422764,
+      "anios_1300_p75": 66.18181818181819,
+      "edad_llega_1300_mediana": 67.27642276422765,
+      "anios_requisito_p25": 30.033003300330034,
+      "anios_requisito_mediana": 38.14713896457766,
+      "anios_requisito_p75": 60.26490066225166,
+      "edad_llega_mediana": 63.14713896457766,
+      "pct_llega_a_tiempo": 0.41242335377232736,
+      "pct_llega_a_tiempo_1300_todos": 0.24541334432030246,
+      "pct_no_llega_ni_a_80": 0.2827609607135067,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.3122680521683809,
+      "pct_Multientidad": 0.06991835436327007,
+      "pct_Intermitentes": 0.33305057788145476,
+      "pct_Ocasionales": 0.28476301558689426
+    },
+    "5": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.3328930149628339,
+      "personas_con_genero": 40516.0,
+      "semanas_anio_p25": 22.714285714285715,
+      "semanas_anio_mediana": 33.0,
+      "semanas_anio_p75": 40.83928571428571,
+      "anios_1300_p25": 31.832100532887935,
+      "anios_1300_mediana": 39.39393939393939,
+      "anios_1300_p75": 57.23270440251572,
+      "edad_llega_1300_mediana": 64.39393939393939,
+      "anios_requisito_p25": 28.455284552845526,
+      "anios_requisito_mediana": 35.03368623676612,
+      "anios_requisito_p75": 51.55807365439093,
+      "edad_llega_mediana": 60.03368623676612,
+      "pct_llega_a_tiempo": 0.4884983710139204,
+      "pct_llega_a_tiempo_1300_todos": 0.3274015203870076,
+      "pct_no_llega_ni_a_80": 0.22539243755553362,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.3969038278019298,
+      "pct_Multientidad": 0.09456049199448627,
+      "pct_Intermitentes": 0.266207189057364,
+      "pct_Ocasionales": 0.2423284911462199
+    },
+    "6": {
+      "personas": 47154.0,
+      "prob_continuidad_media": 0.4237920880398514,
+      "personas_con_genero": 38942.0,
+      "semanas_anio_p25": 24.785714285714285,
+      "semanas_anio_mediana": 33.785714285714285,
+      "semanas_anio_p75": 41.392857142857146,
+      "anios_1300_p25": 31.40638481449525,
+      "anios_1300_mediana": 38.47780126849894,
+      "anios_1300_p75": 52.449567723342945,
+      "edad_llega_1300_mediana": 63.47780126849894,
+      "anios_requisito_p25": 27.888446215139446,
+      "anios_requisito_mediana": 34.339622641509436,
+      "anios_requisito_p75": 47.64397905759162,
+      "edad_llega_mediana": 59.339622641509436,
+      "pct_llega_a_tiempo": 0.506625237532741,
+      "pct_llega_a_tiempo_1300_todos": 0.3445893893482615,
+      "pct_no_llega_ni_a_80": 0.18830568537825484,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.45056622980022903,
+      "pct_Multientidad": 0.09365059167833058,
+      "pct_Intermitentes": 0.2661916274335157,
+      "pct_Ocasionales": 0.18959155108792466
+    },
+    "7": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.49462961627001967,
+      "personas_con_genero": 38360.0,
+      "semanas_anio_p25": 23.714285714285715,
+      "semanas_anio_mediana": 34.67857142857143,
+      "semanas_anio_p75": 42.607142857142854,
+      "anios_1300_p25": 30.511316010058678,
+      "anios_1300_mediana": 37.48712667353244,
+      "anios_1300_p75": 54.81927710843373,
+      "edad_llega_1300_mediana": 62.48712667353244,
+      "anios_requisito_p25": 27.263875365141185,
+      "anios_requisito_mediana": 33.76623376623377,
+      "anios_requisito_p75": 51.724137931034484,
+      "edad_llega_mediana": 58.76623376623377,
+      "pct_llega_a_tiempo": 0.5172836287799791,
+      "pct_llega_a_tiempo_1300_todos": 0.3668143899895725,
+      "pct_no_llega_ni_a_80": 0.23110010427528677,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.5275792598876047,
+      "pct_Multientidad": 0.09776269748701093,
+      "pct_Intermitentes": 0.13421694412045382,
+      "pct_Ocasionales": 0.24044109850493056
+    },
+    "8": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.5588613342427522,
+      "personas_con_genero": 35883.0,
+      "semanas_anio_p25": 29.142857142857142,
+      "semanas_anio_mediana": 38.476190476190474,
+      "semanas_anio_p75": 44.964285714285715,
+      "anios_1300_p25": 28.91183478951549,
+      "anios_1300_mediana": 33.78712871287129,
+      "anios_1300_p75": 44.6078431372549,
+      "edad_llega_1300_mediana": 58.78712871287129,
+      "anios_requisito_p25": 25.091911764705884,
+      "anios_requisito_mediana": 30.308076602830972,
+      "anios_requisito_p75": 41.791044776119406,
+      "edad_llega_mediana": 55.30807660283097,
+      "pct_llega_a_tiempo": 0.6243346431457794,
+      "pct_llega_a_tiempo_1300_todos": 0.46241953013962045,
+      "pct_no_llega_ni_a_80": 0.1530251093832734,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.6518290743293395,
+      "pct_Multientidad": 0.1178666101155763,
+      "pct_Intermitentes": 0.0870321280882197,
+      "pct_Ocasionales": 0.1432721874668646
+    },
+    "9": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.632446079806407,
+      "personas_con_genero": 33153.0,
+      "semanas_anio_p25": 34.714285714285715,
+      "semanas_anio_mediana": 42.464285714285715,
+      "semanas_anio_p75": 47.107142857142854,
+      "anios_1300_p25": 27.596664139499623,
+      "anios_1300_mediana": 30.613961312026913,
+      "anios_1300_p75": 37.44855967078189,
+      "edad_llega_1300_mediana": 55.613961312026916,
+      "anios_requisito_p25": 23.064250411861615,
+      "anios_requisito_mediana": 28.12982998454405,
+      "anios_requisito_p75": 35.316946959896505,
+      "edad_llega_mediana": 53.129829984544045,
+      "pct_llega_a_tiempo": 0.7457243688353995,
+      "pct_llega_a_tiempo_1300_todos": 0.5834766084517238,
+      "pct_no_llega_ni_a_80": 0.06418725303894067,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.765899692503446,
+      "pct_Multientidad": 0.12948785918778496,
+      "pct_Intermitentes": 0.03882939242922277,
+      "pct_Ocasionales": 0.06578305587954618
+    },
+    "10": {
+      "personas": 47155.0,
+      "prob_continuidad_media": 0.740660219787455,
+      "personas_con_genero": 26778.0,
+      "semanas_anio_p25": 42.607142857142854,
+      "semanas_anio_mediana": 46.357142857142854,
+      "semanas_anio_p75": 49.607142857142854,
+      "anios_1300_p25": 26.205903527717783,
+      "anios_1300_mediana": 28.04314329738059,
+      "anios_1300_p75": 30.511316010058678,
+      "edad_llega_1300_mediana": 53.04314329738059,
+      "anios_requisito_p25": 21.325209444021326,
+      "anios_requisito_mediana": 25.312934631432547,
+      "anios_requisito_p75": 28.79746835443038,
+      "edad_llega_mediana": 50.31293463143255,
+      "pct_llega_a_tiempo": 0.9419672865785346,
+      "pct_llega_a_tiempo_1300_todos": 0.8247068489058182,
+      "pct_no_llega_ni_a_80": 0.002427365748002091,
+      "semanas_a_edad_legal_mediana": 1000.0,
+      "pct_Estables": 0.8170077404304952,
+      "pct_Multientidad": 0.17310995652634928,
+      "pct_Intermitentes": 0.00780405047184816,
+      "pct_Ocasionales": 0.0020782525713073903
+    }
+  },
+  "deciles_info": {
+    "personas_archivo": 471549,
+    "personas_con_cluster": 471549,
+    "d1_es_mayor_riesgo": true,
+    "convencion": "D1 = mayor riesgo (menor probabilidad de continuidad)"
+  },
+  "chequeo_vs_notebook_03": {
+    "Estables": {
+      "notebook_03": 40.57142857142857,
+      "notebook_05": 40.57142857142857,
+      "personas_03": 249680.0,
+      "personas_05": 249680.0,
+      "diferencia": 0.0,
+      "resultados_json": 40.57142857142857
+    },
+    "Multientidad": {
+      "notebook_03": 37.75,
+      "notebook_05": 37.75,
+      "personas_03": 55872.0,
+      "personas_05": 55872.0,
+      "diferencia": 0.0,
+      "resultados_json": 37.75
+    },
+    "Intermitentes": {
+      "notebook_03": 25.178571428571427,
+      "notebook_05": 25.178571428571427,
+      "personas_03": 184455.0,
+      "personas_05": 184455.0,
+      "diferencia": 0.0,
+      "resultados_json": 25.178571428571427
+    },
+    "Ocasionales": {
+      "notebook_03": 11.357142857142858,
+      "notebook_05": 11.357142857142858,
+      "personas_03": 358260.0,
+      "personas_05": 358260.0,
+      "diferencia": 0.0,
+      "resultados_json": 11.357142857142858
+    }
+  },
+  "simulador": {
+    "firma": "cuando_me_pensiono(meses_por_anio, honorario_mensual, semanas_actuales=0, edad_actual=25, genero=\"Hombre\", n_entidades=1, semanas_requeridas=None)",
+    "semanas_requeridas_por_genero": {
+      "Hombre": 1300,
+      "Mujer": 1000
+    },
+    "smmlv_usado": {
+      "anio": 2025,
+      "valor": 1423500
+    },
+    "smmlv_tabla": {
+      "2022": 1000000,
+      "2023": 1160000,
+      "2024": 1300000,
+      "2025": 1423500
+    },
+    "fraccion_ibc": 0.4,
+    "tasa_cotizacion_pension": 0.16,
+    "semanas_por_mes": 4.348214285714286,
+    "semanas_por_anio_por_cluster_mediana": {
+      "Estables": 40.57142857142857,
+      "Multientidad": 37.75,
+      "Intermitentes": 25.178571428571427,
+      "Ocasionales": 11.357142857142858
+    },
+    "arbol": {
+      "profundidad_max": 3,
+      "min_samples_leaf": 500,
+      "class_weight": "balanced",
+      "variables": [
+        "meses_contrato_por_anio",
+        "honorario_mensual",
+        "n_entidades"
+      ],
+      "particion": "80/20 estratificada, semilla 42",
+      "exactitud": 0.6983684440095724,
+      "exactitud_balanceada": 0.7242314989722335,
+      "sin_pesos": {
+        "exactitud": 0.7117721951737065,
+        "exactitud_balanceada": 0.6964591014850257,
+        "clusters_que_predice": [
+          "Estables",
+          "Multientidad",
+          "Ocasionales"
+        ]
+      },
+      "sensibilidad_con_contratos_por_anio": {
+        "exactitud": 0.8000047154797412,
+        "exactitud_balanceada": 0.8248912728468686,
+        "clusters_que_predice": [
+          "Estables",
+          "Intermitentes",
+          "Multientidad",
+          "Ocasionales"
+        ]
+      },
+      "matriz_confusion_normalizada": {
+        "Estables": {
+          "Estables": 0.5528476449855816,
+          "Multientidad": 0.026193527715475808,
+          "Intermitentes": 0.4113865748157642,
+          "Ocasionales": 0.00957225248317847
+        },
+        "Multientidad": {
+          "Estables": 0.012348993288590604,
+          "Multientidad": 0.9795973154362416,
+          "Intermitentes": 0.007874720357941834,
+          "Ocasionales": 0.0001789709172259508
+        },
+        "Intermitentes": {
+          "Estables": 0.10617765850749505,
+          "Multientidad": 0.031389769862568105,
+          "Intermitentes": 0.5132417120706948,
+          "Ocasionales": 0.3491908595592421
+        },
+        "Ocasionales": {
+          "Estables": 0.0,
+          "Multientidad": 0.014081951655222464,
+          "Intermitentes": 0.13467872494836153,
+          "Ocasionales": 0.8512393233964161
+        }
+      },
+      "importancia_variables": {
+        "meses_contrato_por_anio": 0.4389746486696552,
+        "honorario_mensual": 0.0,
+        "n_entidades": 0.5610253513303448
+      },
+      "reglas_texto": "|--- n_entidades <= 1.42\n|   |--- meses_contrato_por_anio <= 5.04\n|   |   |--- meses_contrato_por_anio <= 2.05\n|   |   |   |--- class: Ocasionales\n|   |   |--- meses_contrato_por_anio >  2.05\n|   |   |   |--- class: Ocasionales\n|   |--- meses_contrato_por_anio >  5.04\n|   |   |--- meses_contrato_por_anio <= 8.98\n|   |   |   |--- class: Intermitentes\n|   |   |--- meses_contrato_por_anio >  8.98\n|   |   |   |--- class: Estables\n|--- n_entidades >  1.42\n|   |--- n_entidades <= 1.58\n|   |   |--- meses_contrato_por_anio <= 5.00\n|   |   |   |--- class: Multientidad\n|   |   |--- meses_contrato_por_anio >  5.00\n|   |   |   |--- class: Multientidad\n|   |--- n_entidades >  1.58\n|   |   |--- meses_contrato_por_anio <= 1.34\n|   |   |   |--- class: Multientidad\n|   |   |--- meses_contrato_por_anio >  1.34\n|   |   |   |--- class: Multientidad\n",
+      "reglas_simplificadas": [
+        {
+          "condiciones": [
+            "entidades al año ≤ 1,42",
+            "meses de contrato al año ≤ 5,04"
+          ],
+          "cluster": "Ocasionales",
+          "personas_entrenamiento": 297562
+        },
+        {
+          "condiciones": [
+            "entidades al año ≤ 1,42",
+            "5,04 < meses de contrato al año ≤ 8,98"
+          ],
+          "cluster": "Intermitentes",
+          "personas_entrenamiento": 197410
+        },
+        {
+          "condiciones": [
+            "entidades al año ≤ 1,42",
+            "meses de contrato al año > 8,98"
+          ],
+          "cluster": "Estables",
+          "personas_entrenamiento": 125536
+        },
+        {
+          "condiciones": [
+            "entidades al año > 1,42"
+          ],
+          "cluster": "Multientidad",
+          "personas_entrenamiento": 58105
+        }
+      ]
+    },
+    "ejemplos": [
+      {
+        "ejemplo": "Profesional con contrato casi todo el año",
+        "meses_por_anio": 11.0,
+        "honorario_mensual": 5000000,
+        "semanas_actuales": 150,
+        "edad_actual": 28,
+        "genero": "Mujer",
+        "semanas_requeridas": 1000,
+        "semanas_por_anio": 47.8,
+        "ibc": 2000000,
+        "aporte_pension_mensual": 320000,
+        "cotiza_sobre_minimo": false,
+        "semanas_que_faltan": 850,
+        "anios_que_faltan": 17.8,
+        "edad_a_la_que_llega": 45.8,
+        "edad_legal": 57,
+        "llega_antes_de_edad_legal": true,
+        "edad_probable_de_pension": 57.0,
+        "semanas_a_la_edad_legal": 1000.0,
+        "meses_por_anio_necesarios_para_llegar_a_tiempo": 6.7,
+        "cluster_mas_probable": "Estables",
+        "edad_a_la_que_llega_si_1300": 52.0,
+        "llega_a_tiempo_si_1300": true
+      },
+      {
+        "ejemplo": "Apoyo a la gestión con huecos entre contratos",
+        "meses_por_anio": 6.5,
+        "honorario_mensual": 2200000,
+        "semanas_actuales": 0,
+        "edad_actual": 25,
+        "genero": "Hombre",
+        "semanas_requeridas": 1300,
+        "semanas_por_anio": 28.3,
+        "ibc": 1423500,
+        "aporte_pension_mensual": 227760,
+        "cotiza_sobre_minimo": true,
+        "semanas_que_faltan": 1300,
+        "anios_que_faltan": 46.0,
+        "edad_a_la_que_llega": 71.0,
+        "edad_legal": 62,
+        "llega_antes_de_edad_legal": false,
+        "edad_probable_de_pension": 71.0,
+        "semanas_a_la_edad_legal": 1045.7,
+        "meses_por_anio_necesarios_para_llegar_a_tiempo": 8.1,
+        "cluster_mas_probable": "Intermitentes",
+        "edad_a_la_que_llega_si_1300": 71.0,
+        "llega_a_tiempo_si_1300": false
+      },
+      {
+        "ejemplo": "Contratista ocasional (un contrato corto al año)",
+        "meses_por_anio": 3.0,
+        "honorario_mensual": 3000000,
+        "semanas_actuales": 100,
+        "edad_actual": 30,
+        "genero": "Mujer",
+        "semanas_requeridas": 1000,
+        "semanas_por_anio": 13.0,
+        "ibc": 1423500,
+        "aporte_pension_mensual": 227760,
+        "cotiza_sobre_minimo": true,
+        "semanas_que_faltan": 900,
+        "anios_que_faltan": 69.0,
+        "edad_a_la_que_llega": 99.0,
+        "edad_legal": 57,
+        "llega_antes_de_edad_legal": false,
+        "edad_probable_de_pension": 99.0,
+        "semanas_a_la_edad_legal": 452.2,
+        "meses_por_anio_necesarios_para_llegar_a_tiempo": 7.7,
+        "cluster_mas_probable": "Ocasionales",
+        "edad_a_la_que_llega_si_1300": 122.0,
+        "llega_a_tiempo_si_1300": false
+      }
+    ]
+  },
+  "casos_reales": {
+    "archivo": "outputs/casos_reales.json",
+    "k_minimo": 10,
+    "k_por_caso": [
+      10,
+      18,
+      10
+    ],
+    "tipo_por_caso": [
+      "trayectoria real anonimizada",
+      "trayectoria real anonimizada",
+      "trayectoria real anonimizada"
+    ]
+  },
+  "cobertura_personas_por_anio": {
+    "2020": 210496,
+    "2021": 325660,
+    "2022": 402755,
+    "2023": 437494,
+    "2024": 471549,
+    "2025": 513680
+  },
+  "figuras": {
+    "05_edad_pension_por_cluster.png": "Edad mediana a la que cada tipo de trayectoria completaría sus semanas (hombres 1.300, mujeres 1.000), con rango intercuartílico y edades legales.",
+    "05_semanas_requeridas.png": "% de contratistas que cotiza al menos X semanas por año, con los umbrales de hombres (35,1), mujeres con la regla vigente (31,3) y mujeres con 1.300 (40,6, sensibilidad).",
+    "05_a_tiempo_por_genero.png": "% que completa sus semanas a la edad legal, por tipo de trayectoria y género, con la sensibilidad de 1.300 semanas para mujeres.",
+    "05_pension_por_decil.png": "% que llega a tiempo y edad mediana de llegada por decil de riesgo del modelo del notebook 04 (D1 = mayor riesgo).",
+    "05_simulador_curva.png": "Curvas del simulador (hombres 1.300, mujeres 1.000): edad de llegada según los meses de contrato al año, con la mediana de cada cluster.",
+    "05_casos_reales.png": "Línea de tiempo 2022–2025 de los tres casos reales anonimizados (k ≥ 10) y su proyección."
+  }
+}

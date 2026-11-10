@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>¿Cuándo me pensiono?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: libreta de semanas — controles a la izquierda, la "historia laboral" (cuadrícula de semanas) y el veredicto a la derecha; una columna en el celular */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#15233a; --muted:#5b6778; --line:#d9dee6;
+  --accent:#0d6e6a; --accent-soft:#d5ecea; --empty:#e6eaef;
+  --ok:#177245; --ok-soft:#dcf1e4; --bad:#b4431c; --bad-soft:#f8e3da;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-num:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1622; --surface:#17202e; --ink:#e7ecf3; --muted:#9aa6b6; --line:#2a3546;
+  --accent:#4cc3bb; --accent-soft:#163a3b; --empty:#243041;
+  --ok:#5fd394; --ok-soft:#183427; --bad:#f08a62; --bad-soft:#3a2219; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1622; --surface:#17202e; --ink:#e7ecf3; --muted:#9aa6b6; --line:#2a3546;
+  --accent:#4cc3bb; --accent-soft:#163a3b; --empty:#243041;
+  --ok:#5fd394; --ok-soft:#183427; --bad:#f08a62; --bad-soft:#3a2219; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 40px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-family:var(--f-num);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1.05;margin:0;text-wrap:balance}
+.lead{color:var(--muted);max-width:64ch;margin:0}
+
+.presets{display:flex;flex-wrap:wrap;gap:8px}
+.presets button{font:600 14px var(--f-body);padding:8px 14px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);color:var(--ink);cursor:pointer}
+.presets button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.presets button:focus-visible,input:focus-visible,select:focus-visible,.seg button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.grid{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.panel h2{font-family:var(--f-display);font-size:15px;font-weight:700;letter-spacing:.02em;margin:0;color:var(--muted);text-transform:uppercase}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label,.field .lbl{font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:12px}
+.field output,.val{font-family:var(--f-num);font-variant-numeric:tabular-nums;color:var(--accent)}
+.hint{font-size:13px;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--accent)}
+input[type=number]{width:100%;font:500 16px var(--f-num);padding:9px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{font:600 15px var(--f-body);padding:9px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.check input{margin-top:3px;accent-color:var(--accent)}
+
+.result{gap:22px}
+.verdict{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 24px}
+.age{font-family:var(--f-display);font-weight:800;font-size:clamp(64px,11vw,112px);line-height:.9;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.age small{font-size:.32em;font-weight:700;letter-spacing:0;margin-left:6px;color:var(--muted)}
+.verdict-text{display:flex;flex-direction:column;gap:8px;min-width:0;max-width:40ch}
+.pill{align-self:flex-start;font:700 13px var(--f-body);letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.bad{background:var(--bad-soft);color:var(--bad)}
+.verdict-text p{margin:0}
+
+.ledger-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.ledger-head strong{font-family:var(--f-display);font-size:18px}
+.ledger{display:grid;grid-template-columns:repeat(26,minmax(0,1fr));gap:3px}
+.ledger i{display:block;aspect-ratio:1;border-radius:2px;background:var(--empty);max-width:100%}
+.ledger i.on{background:var(--accent)}
+.ledger i.prev{background:var(--muted)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+
+.timeline{position:relative;height:100px;margin-top:4px}
+.tl-bar{position:absolute;left:0;right:0;top:40px;height:10px;border-radius:5px;background:var(--empty)}
+.tl-fill{position:absolute;left:0;top:40px;height:10px;border-radius:5px;background:var(--accent);transition:width .35s ease}
+.tl-mark{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;font-size:12px;line-height:1.25;white-space:nowrap}
+.tl-mark b{font-family:var(--f-num);font-weight:500;font-size:14px}
+.tl-mark.legal{top:0;color:var(--ink)}
+.tl-mark.legal::after{content:"";width:2px;height:24px;background:currentColor;margin-top:2px}
+.tl-mark.llega{top:38px;color:var(--ink)}
+.tl-mark.llega::before{content:"";width:2px;height:18px;background:currentColor;margin-bottom:2px}
+.tl-axis{display:flex;justify-content:space-between;font-family:var(--f-num);font-size:12px;color:var(--muted)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{border-top:2px solid var(--line);padding-top:8px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat .k{font-size:13px;color:var(--muted)}
+.stat .v{font-family:var(--f-num);font-variant-numeric:tabular-nums;font-size:20px}
+.stat .s{font-size:13px;color:var(--muted)}
+
+.group{display:flex;gap:14px;align-items:center;background:var(--accent-soft);border-radius:10px;padding:12px 14px}
+.group .gname{font-family:var(--f-display);font-weight:700;font-size:18px}
+.group p{margin:0;font-size:14px}
+
+.case-note{font-size:14px;color:var(--muted);margin:0}
+.case-note[hidden]{display:none!important}
+.months{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.months span{font-family:var(--f-num);font-size:13px;padding:3px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+
+footer{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px;max-width:80ch}
+footer p{margin:0}
+@media (prefers-reduced-motion:reduce){.tl-fill{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">SECOP II · contratos de prestación de servicios 2022–2025</span>
+    <h1>¿Cuándo me pensiono si soy contratista del Estado?</h1>
+    <p class="lead">Escribe cuántos meses al año sueles tener contrato y el simulador proyecta a qué edad completarías las semanas que exige Colpensiones si sigues a ese ritmo.</p>
+  </header>
+
+  <div class="presets" role="group" aria-label="Casos de ejemplo">
+    <button type="button" data-preset="intermitente" id="p-intermitente">Caso real · Intermitente</button>
+    <button type="button" data-preset="estable" id="p-estable">Caso real · Estable</button>
+    <button type="button" data-preset="ocasional" id="p-ocasional">Caso real · Ocasional</button>
+    <button type="button" data-preset="tipico" id="p-tipico">Contratista típico 2024</button>
+  </div>
+
+  <div class="grid">
+    <form class="panel" id="form" autocomplete="off">
+      <h2>Tu situación</h2>
+      <div class="field">
+        <span class="lbl" id="lbl-genero">Género</span>
+        <div class="seg" role="group" aria-labelledby="lbl-genero">
+          <button type="button" id="g-mujer" data-g="Mujer">Mujer</button>
+          <button type="button" id="g-hombre" data-g="Hombre">Hombre</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="meses">Meses con contrato al año <output id="meses-out" for="meses"></output></label>
+        <input type="range" id="meses" min="0" max="12" step="0.05">
+        <span class="hint">Promedio de un año típico, contando los años sin contrato.</span>
+      </div>
+      <div class="field">
+        <label for="honorario">Honorario mensual (COP)</label>
+        <input type="number" id="honorario" min="100000" step="100000" inputmode="numeric">
+        <span class="hint">El honorario no cambia cuándo completas las semanas: Colpensiones cuenta el tiempo cotizado, no cuánto ganas. Cambia tu aporte y el monto de la pensión.</span>
+      </div>
+      <div class="field">
+        <label for="edad">Edad actual <output id="edad-out" for="edad"></output></label>
+        <input type="range" id="edad" min="18" max="60" step="1">
+      </div>
+      <div class="field">
+        <label for="semanas">Semanas que ya tienes cotizadas</label>
+        <input type="number" id="semanas" min="0" max="1300" step="10" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="entidades">Entidades con las que trabajas al año <output id="entidades-out" for="entidades"></output></label>
+        <input type="range" id="entidades" min="1" max="4" step="0.1">
+      </div>
+      <label class="check" for="sens"><input type="checkbox" id="sens"> Exigirle 1.300 semanas también a las mujeres (regla anterior a la Sentencia C-197 de 2023)</label>
+    </form>
+
+    <section class="panel result" aria-live="polite">
+      <div class="verdict">
+        <div class="age" id="age-big">—</div>
+        <div class="verdict-text">
+          <span class="pill" id="pill"></span>
+          <p id="verdict-line"></p>
+        </div>
+      </div>
+
+      <p class="case-note" id="case-note" hidden></p>
+
+      <div>
+        <div class="ledger-head">
+          <strong>Tu historia laboral a la edad de pensión</strong>
+          <span class="val" id="ledger-count"></span>
+        </div>
+        <div class="ledger" id="ledger" aria-hidden="true"></div>
+        <div class="legend" style="margin-top:8px">
+          <span><i style="background:var(--muted)"></i>Ya cotizadas</span>
+          <span><i style="background:var(--accent)"></i>Las que alcanzas a cotizar antes de la edad legal</span>
+          <span><i style="background:var(--empty)"></i>Las que te faltarían</span>
+        </div>
+        <p class="hint" style="margin:6px 0 0">Cada cuadro son 10 semanas.</p>
+      </div>
+
+      <div>
+        <div class="timeline" id="timeline">
+          <div class="tl-bar"></div>
+          <div class="tl-fill" id="tl-fill"></div>
+          <div class="tl-mark legal" id="tl-legal"><span>Edad legal</span><b id="tl-legal-v"></b></div>
+          <div class="tl-mark llega" id="tl-llega"><b id="tl-llega-v"></b><span>Completas las semanas</span></div>
+        </div>
+        <div class="tl-axis"><span id="ax-min"></span><span>100 años</span></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="k">Semanas por año</span><span class="v" id="s-sem"></span><span class="s" id="s-sem-s"></span></div>
+        <div class="stat"><span class="k">Ritmo necesario para llegar a tiempo</span><span class="v" id="s-nec"></span><span class="s">meses de contrato al año</span></div>
+        <div class="stat"><span class="k">IBC (base de cotización)</span><span class="v" id="s-ibc"></span><span class="s" id="s-ibc-s"></span></div>
+        <div class="stat"><span class="k">Aporte a pensión</span><span class="v" id="s-aporte"></span><span class="s">16% del IBC, cada mes con contrato</span></div>
+        <div class="stat"><span class="k">Pensión estimada al mes</span><span class="v" id="s-pension"></span><span class="s" id="s-pension-s"></span></div>
+      </div>
+
+      <div class="group">
+        <div>
+          <div class="hint">Tu trayectoria se parece a la de los</div>
+          <div class="gname" id="g-name"></div>
+        </div>
+        <p id="g-text"></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p><strong>Cómo se calcula.</strong> Semanas por año = meses de contrato × 4,35. Se exigen 1.300 semanas a los hombres (edad 62) y 1.000 a las mujeres (edad 57; la Sentencia C-197 de 2023 las reduce gradualmente desde 1.250 en 2026 hasta 1.000 en 2036). El IBC del independiente es el 40% del honorario, con piso de 1 SMMLV (2025: $1.423.500). La pensión estimada usa la fórmula del régimen de prima media (Ley 797 de 2003: 65,5% − 0,5 × IBC en salarios mínimos, con piso de un salario mínimo), en pesos de 2025 y suponiendo que el IBC se mantiene; es una aproximación y la reforma pensional (Ley 2381 de 2024) puede cambiarla. El tipo de trayectoria sale de un árbol de decisión ajustado sobre 848.267 contratistas (exactitud 69,8%).</p>
+    <p><strong>Límites.</strong> Es una cota superior del tiempo: no cuenta el empleo formal entre contratos ni los contratos en SECOP I, y supone que mantienes el mismo ritmo. Los casos reales están anonimizados: al menos 10 contratistas comparten cada patrón y no se muestra entidad ni fechas. No es asesoría pensional.</p>
+    <p>Fuente: SECOP II, datos.gov.co (dataset jbjy-vk9h), 4.274.143 contratos de 1.023.532 personas. Proyecto final de Machine Learning.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const SPM = 365.25/12/7;               // semanas por mes de contrato
+  const SMMLV = 1423500, IBC_FRAC = 0.40, TASA = 0.16;
+  const EDAD_LEGAL = {Hombre:62, Mujer:57};
+  const SEMANAS = {Hombre:1300, Mujer:1000};
+  // % del grupo que llega a tiempo con la regla vigente (notebook 05, tabla 05_pension_cluster_genero.csv)
+  const A_TIEMPO = {
+    Estables:{Hombre:.694, Mujer:.831}, Multientidad:{Hombre:.547, Mujer:.654},
+    Intermitentes:{Hombre:.210, Mujer:.322}, Ocasionales:{Hombre:.013, Mujer:.033}
+  };
+  const PERSONAS = {Estables:249680, Multientidad:55872, Intermitentes:184455, Ocasionales:358260};
+  const TOTAL = 848267;
+  const PRESETS = {
+    intermitente:{g:"Mujer", meses:5.75, hon:3000000, edad:25, sem:0, ent:1,
+      nota:"Caso real anonimizado (18 contratistas comparten este patrón). Meses con contrato:", m:{2022:11,2023:11,2024:1,2025:0}},
+    estable:{g:"Mujer", meses:9.5, hon:4000000, edad:25, sem:0, ent:1,
+      nota:"Caso real anonimizado (10 contratistas comparten este patrón). Tres años completos y casi nada en 2025:", m:{2022:12,2023:12,2024:12,2025:2}},
+    ocasional:{g:"Mujer", meses:2.5, hon:3500000, edad:25, sem:0, ent:1,
+      nota:"Caso real anonimizado (10 contratistas comparten este patrón). Meses con contrato:", m:{2022:3,2023:7,2024:0,2025:0}},
+    tipico:{g:"Hombre", meses:7.9, hon:3950000, edad:25, sem:0, ent:1,
+      nota:"Contratista típico de 2024: mediana nacional de meses con contrato (7,9) y de honorario ($3,95 millones).", m:null}
+  };
+
+  const $ = id => document.getElementById(id);
+  const fmt = (v,d=0) => v.toLocaleString("es-CO",{minimumFractionDigits:d,maximumFractionDigits:d});
+  const pesos = v => "$" + fmt(Math.round(v));
+  let genero = "Mujer";
+
+  // cuadrícula de semanas: 130 cuadros de 10 semanas
+  const ledger = $("ledger");
+  for(let i=0;i<130;i++){ ledger.appendChild(document.createElement("i")); }
+  const cells = ledger.children;
+
+  function cluster(meses, ent){
+    if(ent > 1.42) return "Multientidad";
+    if(meses <= 5.04) return "Ocasionales";
+    if(meses <= 8.98) return "Intermitentes";
+    return "Estables";
+  }
+
+  function calc(){
+    const meses = +$("meses").value, hon = Math.max(+$("honorario").value || 0, 0);
+    const edad = +$("edad").value, sem0 = Math.max(+$("semanas").value || 0, 0), ent = +$("entidades").value;
+    const exig = (genero==="Mujer" && $("sens").checked) ? 1300 : SEMANAS[genero];
+    const legal = EDAD_LEGAL[genero];
+    const semAnio = meses*SPM;
+    const faltan = Math.max(exig - sem0, 0);
+    const anios = semAnio>0 ? faltan/semAnio : Infinity;
+    const llega = edad + anios;
+    const hastaLegal = Math.max(legal - edad, 0);
+    const semLegal = Math.min(sem0 + semAnio*hastaLegal, exig);
+    const nec = hastaLegal>0 ? faltan/hastaLegal/SPM : Infinity;
+    const ibcBase = IBC_FRAC*hon, ibc = Math.max(ibcBase, SMMLV);
+    return {meses,hon,edad,sem0,ent,exig,legal,semAnio,faltan,anios,llega,semLegal,nec,ibc,minimo:ibcBase<=SMMLV,cl:cluster(meses,ent)};
+  }
+
+  function render(){
+    const r = calc();
+    $("meses-out").textContent = fmt(r.meses,2).replace(/,?0+$/,"").replace(/,$/,"") + " meses";
+    $("edad-out").textContent = r.edad + " años";
+    $("entidades-out").textContent = fmt(r.ent,1);
+    $("g-mujer").setAttribute("aria-pressed", genero==="Mujer");
+    $("g-hombre").setAttribute("aria-pressed", genero==="Hombre");
+
+    const aTiempo = r.llega <= r.legal;
+    const nunca = !isFinite(r.llega);
+    $("age-big").innerHTML = nunca ? "Nunca" : fmt(r.llega,1) + "<small>años</small>";
+    const pill = $("pill");
+    pill.className = "pill " + (aTiempo ? "ok" : "bad");
+    pill.textContent = aTiempo ? "Llegas a tiempo" : "No llegas a tiempo";
+    const sExig = fmt(r.exig) + " semanas";
+    if(nunca){
+      $("verdict-line").textContent = `Sin meses de contrato no sumas semanas. Necesitas ${sExig} y la edad legal es ${r.legal}.`;
+    } else if(aTiempo){
+      $("verdict-line").textContent = `Completas tus ${sExig} a los ${fmt(r.llega,1)} años, antes de la edad legal (${r.legal}).`;
+    } else {
+      $("verdict-line").textContent = `Completas tus ${sExig} a los ${fmt(r.llega,1)} años: ${fmt(r.llega - r.legal,1)} años después de la edad legal. A los ${r.legal} tendrías ${fmt(r.semLegal)} semanas.`;
+    }
+
+    // cuadrícula
+    const prev = Math.round(Math.min(r.sem0, r.exig)/10);
+    const on = Math.round(r.semLegal/10);
+    const total = Math.round(r.exig/10);
+    for(let i=0;i<cells.length;i++){
+      const c = cells[i];
+      c.className = i < prev ? "prev" : (i < on ? "on" : "");
+      c.style.visibility = i < total ? "visible" : "hidden";
+    }
+    $("ledger-count").textContent = `${fmt(r.semLegal)} de ${fmt(r.exig)} semanas`;
+
+    // línea de tiempo
+    const min = r.edad, max = 100, span = max - min;
+    const pos = a => Math.max(0, Math.min(100, (a - min)/span*100));
+    $("ax-min").textContent = r.edad + " años";
+    const clampLbl = v => Math.min(Math.max(v, 9), 91);
+    $("tl-legal").style.left = clampLbl(pos(r.legal)) + "%";
+    $("tl-legal-v").textContent = r.legal;
+    const llegaPos = nunca ? 100 : pos(r.llega);
+    $("tl-llega").style.left = clampLbl(llegaPos) + "%";
+    $("tl-llega-v").textContent = nunca ? "nunca" : (r.llega > 100 ? "más de 100" : fmt(r.llega,1));
+    $("tl-fill").style.width = llegaPos + "%";
+    $("tl-fill").style.background = aTiempo ? "var(--accent)" : "var(--bad)";
+
+    // estadísticas
+    $("s-sem").textContent = fmt(r.semAnio,1);
+    $("s-sem-s").textContent = `de ${fmt(r.exig/Math.max(r.legal-25,1),1)} que exige empezar a los 25`;
+    $("s-nec").textContent = isFinite(r.nec) ? fmt(Math.min(r.nec,99),1) : "—";
+    $("s-ibc").textContent = pesos(r.ibc);
+    $("s-ibc-s").textContent = r.minimo ? "Cotizas sobre el salario mínimo" : "40% de tu honorario";
+    $("s-aporte").textContent = pesos(TASA*r.ibc);
+    // Ley 797 de 2003 (régimen de prima media): tasa = 65,5 − 0,5·s, entre 55% y 65%; piso 1 SMMLV y tope 25 SMMLV
+    const s = r.ibc/SMMLV, tasaRep = Math.min(Math.max(65.5 - 0.5*s, 55), 65)/100;
+    const pension = Math.min(Math.max(tasaRep*r.ibc, SMMLV), 25*SMMLV);
+    $("s-pension").textContent = pesos(pension);
+    $("s-pension-s").textContent = pension <= SMMLV ? "Un salario mínimo (el piso)" : `${fmt(tasaRep*100,1)}% de tu IBC`;
+
+    // grupo
+    const pct = A_TIEMPO[r.cl][genero];
+    $("g-name").textContent = r.cl;
+    $("g-text").textContent = `${fmt(PERSONAS[r.cl]/TOTAL*100,0)}% de los contratistas está en este grupo. Con la regla vigente, llega a tiempo el ${fmt(pct*100,0)}% de ${genero==="Mujer"?"las mujeres":"los hombres"} del grupo.`;
+  }
+
+  function clearPreset(){
+    document.querySelectorAll(".presets button").forEach(b=>b.setAttribute("aria-pressed","false"));
+    $("case-note").hidden = true;
+  }
+
+  function applyPreset(key){
+    const p = PRESETS[key]; if(!p) return;
+    genero = p.g; $("meses").value = p.meses; $("honorario").value = p.hon;
+    $("edad").value = p.edad; $("semanas").value = p.sem; $("entidades").value = p.ent; $("sens").checked = false;
+    document.querySelectorAll(".presets button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.preset===key));
+    const n = $("case-note");
+    n.innerHTML = "";
+    n.append(p.nota);
+    if(p.m){
+      const box = document.createElement("span"); box.className = "months";
+      Object.entries(p.m).forEach(([y,v])=>{ const s=document.createElement("span"); s.textContent=`${y}: ${v}`; box.appendChild(s); });
+      n.appendChild(box);
+    }
+    n.hidden = false;
+    render();
+  }
+
+  document.querySelectorAll(".presets button").forEach(b=>b.addEventListener("click",()=>{
+    applyPreset(b.dataset.preset);
+    try{ history.replaceState(null,"","#"+b.dataset.preset); }catch(e){}
+  }));
+  document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{ genero=b.dataset.g; clearPreset(); render(); }));
+  ["meses","honorario","edad","semanas","entidades","sens"].forEach(id=>$(id).addEventListener("input",()=>{ clearPreset(); render(); }));
+  $("form").addEventListener("submit",e=>e.preventDefault());
+
+  function fromHash(){
+    const k = (location.hash||"").replace("#","");
+    applyPreset(PRESETS[k] ? k : "intermitente");
+  }
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
+})();
+</script>
+
+</body>
+</html>

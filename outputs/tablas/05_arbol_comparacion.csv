@@ -1,0 +1,4 @@
+,exactitud,exactitud_balanceada,clusters_que_predice
+Sin pesos (3 variables),0.7117721951737065,0.6964591014850257,"['Estables', 'Multientidad', 'Ocasionales']"
+Balanceado (3 variables) ← simulador,0.6983684440095724,0.7242314989722335,"['Estables', 'Intermitentes', 'Multientidad', 'Ocasionales']"
+Balanceado + contratos/año (sensibilidad),0.8000047154797412,0.8248912728468686,"['Estables', 'Intermitentes', 'Multientidad', 'Ocasionales']"

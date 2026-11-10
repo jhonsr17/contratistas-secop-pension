@@ -1,0 +1,1166 @@
+{
+  "01_trayectorias": {
+    "validacion_2024": {
+      "personas_activas": {
+        "esperado": 471547,
+        "obtenido": 471549.0
+      },
+      "meses_mediana": {
+        "esperado": 7.9,
+        "obtenido": 7.934426229508197
+      },
+      "meses_p25": {
+        "esperado": 4.1,
+        "obtenido": 4.131147540983607
+      },
+      "meses_p75": {
+        "esperado": 10.3,
+        "obtenido": 10.327868852459016
+      },
+      "pct_11_meses_o_mas": {
+        "esperado": 13.2,
+        "obtenido": 13.197143881123703
+      },
+      "pct_menos_6_meses": {
+        "esperado": 36.1,
+        "obtenido": 36.05033623228975
+      },
+      "honorario_mediano_millones": {
+        "esperado": 3.95,
+        "obtenido": 3.951553758741259
+      },
+      "pct_cotiza_minimo": {
+        "esperado": 37.5,
+        "obtenido": 37.40820148065207
+      },
+      "semanas_mediana": {
+        "esperado": 34.4,
+        "obtenido": 34.57142857142857
+      },
+      "anios_para_1300": {
+        "esperado": 37.8,
+        "obtenido": 37.60330578512397
+      }
+    },
+    "personas_por_anio": {
+      "2022": 402755,
+      "2023": 437494,
+      "2024": 471549,
+      "2025": 513680
+    },
+    "resumen_por_anio": {
+      "2022": {
+        "personas": 402755.0,
+        "meses_mediana": 9.994520547945205,
+        "pct_11_mas": 25.435314272945092,
+        "pct_menos_6": 28.4644510930963,
+        "honorario_mediano": 3352473.214285714,
+        "pct_cotiza_minimo": 31.06007374210128,
+        "semanas_mediana": 43.42857142857143,
+        "contratos_mediana": 1.0,
+        "pct_con_hueco": 34.3449491626423,
+        "anios_para_1300": 29.934210526315788
+      },
+      "2023": {
+        "personas": 437494.0,
+        "meses_mediana": 9.271232876712329,
+        "pct_11_mas": 17.656013568186076,
+        "pct_menos_6": 25.420005760078997,
+        "honorario_mediano": 3556111.004154961,
+        "pct_cotiza_minimo": 36.30586933763663,
+        "semanas_mediana": 40.285714285714285,
+        "contratos_mediana": 1.0,
+        "pct_con_hueco": 36.26244017060806,
+        "anios_para_1300": 32.269503546099294
+      },
+      "2024": {
+        "personas": 471549.0,
+        "meses_mediana": 7.934426229508197,
+        "pct_11_mas": 13.197143881123703,
+        "pct_menos_6": 36.05033623228975,
+        "honorario_mediano": 3951553.7587412586,
+        "pct_cotiza_minimo": 37.40820148065207,
+        "semanas_mediana": 34.57142857142857,
+        "contratos_mediana": 1.0,
+        "pct_con_hueco": 34.67677802306866,
+        "anios_para_1300": 37.60330578512397
+      },
+      "2025": {
+        "personas": 513680.0,
+        "meses_mediana": 9.04109589041096,
+        "pct_11_mas": 17.58234698645071,
+        "pct_menos_6": 26.962505840211804,
+        "honorario_mediano": 4059355.401606211,
+        "pct_cotiza_minimo": 39.96768416134559,
+        "semanas_mediana": 39.285714285714285,
+        "contratos_mediana": 1.0,
+        "pct_con_hueco": 33.98458184083476,
+        "anios_para_1300": 33.09090909090909
+      }
+    },
+    "personas_distintas_2022_2025": 848267,
+    "filas_persona_anio": 1825478,
+    "limpieza_por_archivo": {
+      "2020": {
+        "filas_originales": 278277,
+        "valor_no_positivo": 119,
+        "inicio_nulo": 3296,
+        "fin_nulo": 0,
+        "fin_antes_de_inicio": 4,
+        "duracion_fuera_0.3_24_meses": 1569,
+        "dias_adicionados_acotados_a_730": 0,
+        "filas_limpias": 273290
+      },
+      "2021": {
+        "filas_originales": 445670,
+        "valor_no_positivo": 207,
+        "inicio_nulo": 5644,
+        "fin_nulo": 0,
+        "fin_antes_de_inicio": 6,
+        "duracion_fuera_0.3_24_meses": 4788,
+        "dias_adicionados_acotados_a_730": 0,
+        "filas_limpias": 435027
+      },
+      "2022": {
+        "filas_originales": 574538,
+        "valor_no_positivo": 294,
+        "inicio_nulo": 3403,
+        "fin_nulo": 1,
+        "fin_antes_de_inicio": 6,
+        "duracion_fuera_0.3_24_meses": 6240,
+        "dias_adicionados_acotados_a_730": 0,
+        "filas_limpias": 564594
+      },
+      "2023": {
+        "filas_originales": 676928,
+        "valor_no_positivo": 475,
+        "inicio_nulo": 4498,
+        "fin_nulo": 1,
+        "fin_antes_de_inicio": 3,
+        "duracion_fuera_0.3_24_meses": 7836,
+        "dias_adicionados_acotados_a_730": 1,
+        "filas_limpias": 664119
+      },
+      "2024": {
+        "filas_originales": 709141,
+        "valor_no_positivo": 311,
+        "inicio_nulo": 4270,
+        "fin_nulo": 4,
+        "fin_antes_de_inicio": 5,
+        "duracion_fuera_0.3_24_meses": 6025,
+        "dias_adicionados_acotados_a_730": 0,
+        "filas_limpias": 698533
+      },
+      "2025": {
+        "filas_originales": 815766,
+        "valor_no_positivo": 275,
+        "inicio_nulo": 3915,
+        "fin_nulo": 4,
+        "fin_antes_de_inicio": 219,
+        "duracion_fuera_0.3_24_meses": 7209,
+        "dias_adicionados_acotados_a_730": 4,
+        "filas_limpias": 804152
+      }
+    },
+    "definiciones": {
+      "mes": "dias_cubiertos * 12 / dias_del_anio",
+      "dias": "inclusivos (fin - inicio + 1) por bloque unido",
+      "honorario": "valor / ((fin - inicio) en dias / 30.4375)",
+      "ibc": "max(0.4 * honorario, SMMLV)"
+    }
+  },
+  "02_exploracion": {
+    "2024": {
+      "personas": 471549,
+      "meses_mediana": 7.934426229508197,
+      "meses_p25": 4.131147540983607,
+      "meses_p75": 10.327868852459016,
+      "pct_11_mas": 0.13197143881123702,
+      "pct_menos_6": 0.36050336232289754,
+      "honorario_mediano": 3951553.7587412586,
+      "pct_cotiza_minimo": 0.37408201480652065,
+      "semanas_mediana": 34.57142857142857,
+      "anios_para_1300": 37.60330578512397
+    },
+    "genero": {
+      "brecha_honorario_mediano_por_anio": {
+        "2022": 0.008448623269773248,
+        "2023": 0.022222222222222254,
+        "2024": 0.009981059181953689,
+        "2025": 0.018877574222795457
+      },
+      "meses_mediana": {
+        "Hombre": {
+          "2022": 9.435616438356165,
+          "2023": 8.843835616438357,
+          "2024": 7.344262295081967,
+          "2025": 8.778082191780822
+        },
+        "Mujer": {
+          "2022": 9.632876712328768,
+          "2023": 9.008219178082191,
+          "2024": 7.442622950819672,
+          "2025": 8.975342465753425
+        }
+      },
+      "honorario_mediano": {
+        "Hombre": {
+          "2022": 3151477.1834465885,
+          "2023": 3424218.75,
+          "2024": 3810909.627403846,
+          "2025": 3997212.4830248943
+        },
+        "Mujer": {
+          "2022": 3124851.539980362,
+          "2023": 3348125.0,
+          "2024": 3772872.712875651,
+          "2025": 3921754.8076923075
+        }
+      },
+      "brecha_2024_por_tipo_objeto": {
+        "Apoyo a la gestión": 0.017803130605573814,
+        "Otro": 0.0667188570804379,
+        "Profesional": 0.05441766463882802
+      },
+      "pct_mujeres_por_tipo_objeto_2024": {
+        "Apoyo a la gestión": 0.5390449072264716,
+        "Otro": 0.550669768431936,
+        "Profesional": 0.5776571819692969
+      },
+      "pct_persona_anio_sin_genero": 0.22277343249274983
+    },
+    "departamentos_2024_top10": {
+      "Distrito Capital de Bogotá": {
+        "personas": 176821,
+        "pct_personas": 0.37497905837993506,
+        "meses_mediana": 9.37704918032787,
+        "honorario_mediano": 4854643.662810004
+      },
+      "Antioquia": {
+        "personas": 40440,
+        "pct_personas": 0.08575991042288288,
+        "meses_mediana": 7.868852459016393,
+        "honorario_mediano": 3896532.3448117226
+      },
+      "Valle del Cauca": {
+        "personas": 40154,
+        "pct_personas": 0.08515339869239463,
+        "meses_mediana": 7.278688524590164,
+        "honorario_mediano": 3967470.580669283
+      },
+      "Cundinamarca": {
+        "personas": 22781,
+        "pct_personas": 0.04831099207081343,
+        "meses_mediana": 8.0,
+        "honorario_mediano": 3013229.6392921954
+      },
+      "Santander": {
+        "personas": 21074,
+        "pct_personas": 0.04469100772136088,
+        "meses_mediana": 6.0,
+        "honorario_mediano": 3308423.9130434785
+      },
+      "Atlántico": {
+        "personas": 16850,
+        "pct_personas": 0.03573329600953453,
+        "meses_mediana": 6.983606557377049,
+        "honorario_mediano": 3969984.8055734877
+      },
+      "Bolívar": {
+        "personas": 15280,
+        "pct_personas": 0.03240384350300817,
+        "meses_mediana": 7.672131147540983,
+        "honorario_mediano": 3531530.448717949
+      },
+      "Boyacá": {
+        "personas": 12279,
+        "pct_personas": 0.026039711673654275,
+        "meses_mediana": 7.377049180327869,
+        "honorario_mediano": 3230433.3333333335
+      },
+      "Tolima": {
+        "personas": 11339,
+        "pct_personas": 0.0240462815105111,
+        "meses_mediana": 7.573770491803279,
+        "honorario_mediano": 3560361.4655461246
+      },
+      "Norte de Santander": {
+        "personas": 10595,
+        "pct_personas": 0.022468502743087145,
+        "meses_mediana": 6.360655737704918,
+        "honorario_mediano": 3096508.3333333335
+      }
+    },
+    "nacional_vs_territorial": {
+      "2022_Nacional": {
+        "personas": 132046.0,
+        "meses_mediana": 10.520547945205479,
+        "pct_11_mas": 0.3369280402284053,
+        "honorario_mediano": 3931988.9937106916,
+        "pct_cotiza_minimo": 0.19347803038335126
+      },
+      "2022_Territorial": {
+        "personas": 270709.0,
+        "meses_mediana": 9.567123287671233,
+        "pct_11_mas": 0.2140748922274472,
+        "honorario_mediano": 3006172.839506173,
+        "pct_cotiza_minimo": 0.36773066281505234
+      },
+      "2023_Nacional": {
+        "personas": 147636.0,
+        "meses_mediana": 9.764383561643836,
+        "pct_11_mas": 0.20182069413964074,
+        "honorario_mediano": 4133359.1008771933,
+        "pct_cotiza_minimo": 0.20811319732314612
+      },
+      "2023_Territorial": {
+        "personas": 289858.0,
+        "meses_mediana": 9.04109589041096,
+        "pct_11_mas": 0.16369394669113843,
+        "honorario_mediano": 3097025.8723307042,
+        "pct_cotiza_minimo": 0.4419784860172912
+      },
+      "2024_Nacional": {
+        "personas": 177286.0,
+        "meses_mediana": 9.21311475409836,
+        "pct_11_mas": 0.17252349311282333,
+        "honorario_mediano": 4487925.432586478,
+        "pct_cotiza_minimo": 0.24668614555012805
+      },
+      "2024_Territorial": {
+        "personas": 294263.0,
+        "meses_mediana": 7.278688524590164,
+        "pct_11_mas": 0.10753985380424994,
+        "honorario_mediano": 3509664.039068303,
+        "pct_cotiza_minimo": 0.4508347974431036
+      },
+      "2025_Nacional": {
+        "personas": 180822.0,
+        "meses_mediana": 9.895890410958904,
+        "pct_11_mas": 0.20354824081140568,
+        "honorario_mediano": 4662054.148706896,
+        "pct_cotiza_minimo": 0.23769231620046233
+      },
+      "2025_Territorial": {
+        "personas": 332858.0,
+        "meses_mediana": 8.745205479452055,
+        "pct_11_mas": 0.1607622469641709,
+        "honorario_mediano": 3613660.8871682556,
+        "pct_cotiza_minimo": 0.4876734223002001
+      }
+    },
+    "serie_mensual": {
+      "enero_por_anio": {
+        "2020": 38604,
+        "2021": 64735,
+        "2022": 279469,
+        "2023": 113876,
+        "2024": 90881,
+        "2025": 134252,
+        "2026": 455420
+      },
+      "febrero_por_anio": {
+        "2020": 43864,
+        "2021": 69296,
+        "2022": 32293,
+        "2023": 131721,
+        "2024": 103952,
+        "2025": 145675,
+        "2026": 13212
+      },
+      "mes_pico_ene_feb": {
+        "2020": "febrero",
+        "2021": "febrero",
+        "2022": "enero",
+        "2023": "febrero",
+        "2024": "febrero",
+        "2025": "febrero",
+        "2026": "enero"
+      },
+      "max_mes": "2026-01-01",
+      "max_valor": 455420,
+      "promedio_mar_jun_2022": 3091.5,
+      "promedio_mar_jun_2023": 59511.5,
+      "promedio_feb_jun_2026": 8371.0,
+      "promedio_feb_jun_2025": 72052.4
+    },
+    "cotiza_minimo_por_anio": {
+      "2022": 0.3106007374210128,
+      "2023": 0.3630586933763663,
+      "2024": 0.37408201480652065,
+      "2025": 0.39967684161345585
+    },
+    "umbral_honorario_2_5_smmlv": {
+      "2022": 2500000.0,
+      "2023": 2900000.0,
+      "2024": 3250000.0,
+      "2025": 3558750.0
+    },
+    "crecimiento_2022_2025": {
+      "smmlv_2022_2025": 0.4235,
+      "honorario_mediano_2022_2025": 0.21085394040086514
+    },
+    "por_anio": {
+      "2022": {
+        "personas": 402755.0,
+        "meses_mediana": 9.994520547945205,
+        "semanas_mediana": 43.42857142857143,
+        "honorario_mediano": 3352473.214285714,
+        "pct_cotiza_minimo": 0.3106007374210128,
+        "Menos de 6 meses": 0.284644510930963,
+        "6 a 11 meses": 0.4610023463395861,
+        "11 meses o más": 0.2543531427294509,
+        "anios_para_1300": 29.934210526315788
+      },
+      "2023": {
+        "personas": 437494.0,
+        "meses_mediana": 9.271232876712329,
+        "semanas_mediana": 40.285714285714285,
+        "honorario_mediano": 3556111.004154961,
+        "pct_cotiza_minimo": 0.3630586933763663,
+        "Menos de 6 meses": 0.25420005760078995,
+        "6 a 11 meses": 0.5692398067173493,
+        "11 meses o más": 0.17656013568186077,
+        "anios_para_1300": 32.269503546099294
+      },
+      "2024": {
+        "personas": 471549.0,
+        "meses_mediana": 7.934426229508197,
+        "semanas_mediana": 34.57142857142857,
+        "honorario_mediano": 3951553.7587412586,
+        "pct_cotiza_minimo": 0.37408201480652065,
+        "Menos de 6 meses": 0.36050336232289754,
+        "6 a 11 meses": 0.5075251988658654,
+        "11 meses o más": 0.13197143881123702,
+        "anios_para_1300": 37.60330578512397
+      },
+      "2025": {
+        "personas": 513680.0,
+        "meses_mediana": 9.04109589041096,
+        "semanas_mediana": 39.285714285714285,
+        "honorario_mediano": 4059355.401606211,
+        "pct_cotiza_minimo": 0.39967684161345585,
+        "Menos de 6 meses": 0.26962505840211803,
+        "6 a 11 meses": 0.5545514717333748,
+        "11 meses o más": 0.1758234698645071,
+        "anios_para_1300": 33.09090909090909
+      }
+    }
+  },
+  "03_clustering": {
+    "n_personas": 848267,
+    "k_elegido": 4,
+    "variables": {
+      "anios_activos": "Años con contrato en 2022–2025 (1–4)",
+      "frac_anios_activos": "Fracción de años observables con contrato",
+      "meses_por_anio_obs": "Meses con contrato por año observable",
+      "meses_prom_activo": "Meses con contrato en los años activos",
+      "frac_anios_9mas": "Fracción de años observables con 9+ meses",
+      "log_honorario": "Log del honorario mensual mediano",
+      "n_entidades_prom": "Entidades distintas por año activo",
+      "n_contratos_prom": "Contratos por año activo",
+      "huecos_prom": "Huecos sin contrato por año activo",
+      "share_nacional": "Proporción de contratos con entidades nacionales",
+      "cubierto_cierre_prom": "Proporción de años con contrato vigente al 31-dic",
+      "anios_previos_2020_2021": "Años con contrato en 2020–2021 (0–2)"
+    },
+    "kmeans_por_k": [
+      {
+        "k": 2,
+        "inercia": 7634006.967419796,
+        "silueta": 0.23141586102676373,
+        "silueta_sd": 0.000329307765390937
+      },
+      {
+        "k": 3,
+        "inercia": 6906572.908426971,
+        "silueta": 0.18628186625352197,
+        "silueta_sd": 0.0021170641565959793
+      },
+      {
+        "k": 4,
+        "inercia": 6267856.779819838,
+        "silueta": 0.19328535500966174,
+        "silueta_sd": 0.0016193168747218778
+      },
+      {
+        "k": 5,
+        "inercia": 5808042.122612035,
+        "silueta": 0.15462206135678813,
+        "silueta_sd": 0.0015950685700215112
+      },
+      {
+        "k": 6,
+        "inercia": 5434654.341257935,
+        "silueta": 0.1526019627133112,
+        "silueta_sd": 0.002392302660413645
+      },
+      {
+        "k": 7,
+        "inercia": 5174521.379693572,
+        "silueta": 0.15410703954187885,
+        "silueta_sd": 0.0026064042196180435
+      },
+      {
+        "k": 8,
+        "inercia": 4900780.09612386,
+        "silueta": 0.15379953506513935,
+        "silueta_sd": 0.002429497750074544
+      }
+    ],
+    "gmm_bic_por_k": [
+      {
+        "k": 2,
+        "bic": 637874.1924800497
+      },
+      {
+        "k": 3,
+        "bic": -54910.256547074685
+      },
+      {
+        "k": 4,
+        "bic": -733583.0501302546
+      },
+      {
+        "k": 5,
+        "bic": -1137889.90568116
+      },
+      {
+        "k": 6,
+        "bic": -1468614.9901070069
+      },
+      {
+        "k": 7,
+        "bic": -1988912.357763785
+      },
+      {
+        "k": 8,
+        "bic": -1932395.5717453968
+      }
+    ],
+    "estabilidad_k4": [
+      {
+        "prueba": "semilla 123 (n_init=20)",
+        "inercia": 6267858.229338286,
+        "ARI_vs_solucion": 0.9994464700059777
+      },
+      {
+        "prueba": "semilla 2024 (n_init=20)",
+        "inercia": 6267852.7668538205,
+        "ARI_vs_solucion": 0.9986882564706103
+      },
+      {
+        "prueba": "submuestra 50% (n_init=10)",
+        "inercia": NaN,
+        "ARI_vs_solucion": 0.9971568460702099
+      },
+      {
+        "prueba": "semilla 2024 con n_init=1 (referencia)",
+        "inercia": 6398158.190664875,
+        "ARI_vs_solucion": 0.44077543624899534
+      },
+      {
+        "prueba": "solución elegida (semilla 42, n_init=20)",
+        "inercia": 6267856.779819838,
+        "ARI_vs_solucion": 1.0
+      }
+    ],
+    "pct_multientidad_con_2mas_entidades": 0.49790592783505155,
+    "ari_kmeans_vs_gmm": 0.1252527357101168,
+    "silueta_gmm": 0.08921430623896123,
+    "pca_varianza_explicada": [
+      0.3498380960476882,
+      0.14198492828363074
+    ],
+    "perfiles": {
+      "Estables": {
+        "personas": 249680.0,
+        "anios_activos": 3.1165171419416855,
+        "meses_por_anio_obs": 9.018400057110902,
+        "meses_prom_activo": 9.510816022905907,
+        "frac_anios_9mas": 0.7246972791840222,
+        "honorario_mediano": 4129729.3908120305,
+        "n_entidades_prom": 1.043882169176546,
+        "n_contratos_prom": 1.4648813815016555,
+        "huecos_prom": 0.31845161807113104,
+        "share_nacional": 0.49819192455231587,
+        "cubierto_cierre": 0.5155185303855602,
+        "anios_previos": 0.8610261134251842,
+        "semanas_por_anio_mediana": 40.57142857142857,
+        "cotiza_minimo": 0.2879973032147816,
+        "pct_mujer": 0.41667334187760335,
+        "pct_entra_2025": 0.08209708426786286,
+        "pct_activo_2025": 0.8898069528997117,
+        "pct_personas": 0.2943412864110003
+      },
+      "Multientidad": {
+        "personas": 55872.0,
+        "anios_activos": 2.8835373711340204,
+        "meses_por_anio_obs": 8.071814770955944,
+        "meses_prom_activo": 9.186431366076489,
+        "frac_anios_9mas": 0.585270797537228,
+        "honorario_mediano": 4964480.230596589,
+        "n_entidades_prom": 1.8966357626956853,
+        "n_contratos_prom": 2.7366555102138217,
+        "huecos_prom": 0.4485058109011073,
+        "share_nacional": 0.3155267638629446,
+        "cubierto_cierre": 0.570858390607102,
+        "anios_previos": 0.9571878579610539,
+        "semanas_por_anio_mediana": 37.75,
+        "cotiza_minimo": 0.1682655593738068,
+        "pct_mujer": 0.36587199312714774,
+        "pct_entra_2025": 0.0842282359679267,
+        "pct_activo_2025": 0.780713058419244,
+        "pct_personas": 0.06586605396649875
+      },
+      "Intermitentes": {
+        "personas": 184455.0,
+        "anios_activos": 2.094153045458242,
+        "meses_por_anio_obs": 5.9358803950277315,
+        "meses_prom_activo": 7.864281721579592,
+        "frac_anios_9mas": 0.28556468153930953,
+        "honorario_mediano": 2980814.0892394125,
+        "n_entidades_prom": 1.0303547387348315,
+        "n_contratos_prom": 2.10716570437234,
+        "huecos_prom": 1.003627352651505,
+        "share_nacional": 0.09869669786539756,
+        "cubierto_cierre": 0.3416619229622401,
+        "anios_previos": 0.40644601664362584,
+        "semanas_por_anio_mediana": 25.178571428571427,
+        "cotiza_minimo": 0.5333852881913385,
+        "pct_mujer": 0.48400965005014773,
+        "pct_entra_2025": 0.13351223875742052,
+        "pct_activo_2025": 0.5932341221436123,
+        "pct_personas": 0.21744922294513402
+      },
+      "Ocasionales": {
+        "personas": 358260.0,
+        "anios_activos": 1.3955228046670016,
+        "meses_por_anio_obs": 2.893759138783449,
+        "meses_prom_activo": 4.936605373418521,
+        "frac_anios_9mas": 0.057924412437894264,
+        "honorario_mediano": 3281942.7165884385,
+        "n_entidades_prom": 1.0094507713206422,
+        "n_contratos_prom": 1.0793827574015147,
+        "huecos_prom": 0.049139591358231455,
+        "share_nacional": 0.3429683555394282,
+        "cubierto_cierre": 0.2705316436852193,
+        "anios_previos": 0.27622397141740634,
+        "semanas_por_anio_mediana": 11.357142857142858,
+        "cotiza_minimo": 0.45701864567632444,
+        "pct_mujer": 0.4899179366940211,
+        "pct_entra_2025": 0.2277759169318372,
+        "pct_activo_2025": 0.3865014235471445,
+        "pct_personas": 0.4223434366773669
+      }
+    },
+    "trayectoria_media_cohorte_2022": {
+      "Estables": {
+        "2022": 9.78532725433985,
+        "2023": 9.691694108502512,
+        "2024": 8.194341853455892,
+        "2025": 8.057961545212166
+      },
+      "Multientidad": {
+        "2022": 9.79737473114026,
+        "2023": 8.937046339625766,
+        "2024": 7.18849317832105,
+        "2025": 7.319815360181475
+      },
+      "Intermitentes": {
+        "2022": 8.466704636196715,
+        "2023": 7.012447001767827,
+        "2024": 2.7001399369018864,
+        "2025": 2.6837030375081925
+      },
+      "Ocasionales": {
+        "2022": 6.097057245059771,
+        "2023": 2.387260065392592,
+        "2024": 0.525069049454505,
+        "2025": 0.6230434560449633
+      }
+    }
+  },
+  "04_supervisado": {
+    "objetivo": "1 si meses_cubiertos(t+1) >= 9; 0 si menos o si no aparece en t+1",
+    "particion": {
+      "train_final": [
+        "2022→2023",
+        "2023→2024"
+      ],
+      "test": "2024→2025",
+      "validacion": "entrena 2022→2023, valida 2023→2024 (solo hacia adelante)"
+    },
+    "protocolo": "hiperparametros, calibracion isotonica, umbral F1 y modelo final elegidos en la validacion hacia adelante; prueba usada una sola vez",
+    "target_encoding_entidad": "2022→2023: fuera de fold dentro del par (5 folds); 2023→2024: con 2022→2023; prueba: con ambos pares",
+    "n": {
+      "train_final": 840249,
+      "validacion": 437494,
+      "test": 471549
+    },
+    "tasa_base": {
+      "2022→2023": 0.5049297960298444,
+      "2023→2024": 0.34990879874923997,
+      "2024→2025": 0.47987377769860606
+    },
+    "modelo_final": "Random Forest",
+    "regla_seleccion": "mayor AUC en validacion 2023→2024 entre los modelos de ML",
+    "lightgbm_interpretado": "LightGBM persona + entidad (A+B)",
+    "variables_bloques": {
+      "persona_A": [
+        "meses_cubiertos",
+        "n_contratos",
+        "n_entidades",
+        "log_honorario_smmlv",
+        "log_valor_total_smmlv",
+        "n_huecos",
+        "hueco_max_dias",
+        "mes_inicio_primer_contrato",
+        "cubierto_al_cierre",
+        "dias_sin_contrato_al_cierre",
+        "share_entidad_nacional",
+        "share_objeto_profesional",
+        "share_objeto_apoyo",
+        "antiguedad_2_anios",
+        "meses_cubiertos_anio_anterior",
+        "cotiza_minimo"
+      ],
+      "entidad_B": [
+        "ent_log_n",
+        "ent_meses_media",
+        "ent_pct_cierre",
+        "ent_renov_rel",
+        "ent_hist_log_n"
+      ],
+      "contexto_C": [
+        "t1_elecciones_locales",
+        "t1_cambio_gobierno_local",
+        "t1_presidencial",
+        "tasa_continuidad_t"
+      ],
+      "logistica_5": [
+        "meses_cubiertos",
+        "cubierto_al_cierre",
+        "dias_sin_contrato_al_cierre",
+        "meses_cubiertos_anio_anterior",
+        "mes_inicio_primer_contrato"
+      ],
+      "categoricas": [
+        "genero",
+        "departamento_modal",
+        "sector_modal",
+        "justificacion_modal"
+      ]
+    },
+    "excluidas_por_leakage": [
+      "dias_adicionados_total",
+      "dias_firmados_para_t1",
+      "estado_contrato",
+      "valor_pagado"
+    ],
+    "lightgbm_parametros": {
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.7,
+      "reg_lambda": 5.0,
+      "cat_smooth": 50,
+      "n_estimators": 25,
+      "num_leaves": 63,
+      "min_child_samples": 1000
+    },
+    "tasa_continuidad_observada_t_menos_1_a_t": {
+      "2022": 0.579662838543266,
+      "2023": 0.5049297960298444,
+      "2024": 0.34990879874923997
+    },
+    "metricas_prueba": {
+      "Dummy": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.47987377769860606,
+        "f1": 0.6485333883608256,
+        "balanced_accuracy": 0.5,
+        "brier": 0.2526928651200228,
+        "umbral": 0.0,
+        "tn": 0.0,
+        "fp": 245265.0,
+        "fn": 0.0,
+        "tp": 226284.0,
+        "brier_sin_calibrar": 0.2526928651200228,
+        "auc_validacion": 0.5,
+        "modelo_final": false
+      },
+      "Persistencia (score = meses en t)": {
+        "roc_auc": 0.7235262150866856,
+        "pr_auc": 0.6760616126912804,
+        "f1": 0.6262638134906351,
+        "balanced_accuracy": 0.6720214033245576,
+        "brier": NaN,
+        "umbral": 9.172602739726027,
+        "tn": 191041.0,
+        "fp": 54224.0,
+        "fn": 98405.0,
+        "tp": 127879.0,
+        "brier_sin_calibrar": NaN,
+        "auc_validacion": 0.7120303427397439,
+        "modelo_final": false
+      },
+      "Contrato vigente al 31-dic": {
+        "roc_auc": 0.6974254902390529,
+        "pr_auc": 0.6527744039482777,
+        "f1": 0.6734311312395392,
+        "balanced_accuracy": 0.6524469229948426,
+        "brier": NaN,
+        "umbral": 0.009501369863013698,
+        "tn": 134700.0,
+        "fp": 110565.0,
+        "fn": 55283.0,
+        "tp": 171001.0,
+        "brier_sin_calibrar": NaN,
+        "auc_validacion": 0.7308647042025801,
+        "modelo_final": false
+      },
+      "Días ya firmados para t+1": {
+        "roc_auc": 0.7359862038174113,
+        "pr_auc": 0.6923109514796525,
+        "f1": 0.6395988541459655,
+        "balanced_accuracy": 0.6807117999348451,
+        "brier": NaN,
+        "umbral": 0.009534246575342466,
+        "tn": 190886.0,
+        "fp": 54379.0,
+        "fn": 94329.0,
+        "tp": 131955.0,
+        "brier_sin_calibrar": NaN,
+        "auc_validacion": 0.7336484538794564,
+        "modelo_final": false
+      },
+      "Logística 5 variables": {
+        "roc_auc": 0.7362132041368008,
+        "pr_auc": 0.6789994127475716,
+        "f1": 0.5309410673849702,
+        "balanced_accuracy": 0.6302637736693413,
+        "brier": 0.27603897227709945,
+        "umbral": 0.30640442132639795,
+        "tn": 204585.0,
+        "fp": 40680.0,
+        "fn": 129799.0,
+        "tp": 96485.0,
+        "brier_sin_calibrar": 0.2122145028551582,
+        "auc_validacion": 0.7415902576269999,
+        "modelo_final": false
+      },
+      "Logística": {
+        "roc_auc": 0.7302257593939068,
+        "pr_auc": 0.6872020949038291,
+        "f1": 0.5908514040171879,
+        "balanced_accuracy": 0.6476550209215173,
+        "brier": 0.25900772773530584,
+        "umbral": 0.3020961775585697,
+        "tn": 189522.0,
+        "fp": 55743.0,
+        "fn": 108031.0,
+        "tp": 118253.0,
+        "brier_sin_calibrar": 0.21497264128966093,
+        "auc_validacion": 0.7287951219241016,
+        "modelo_final": false
+      },
+      "Random Forest": {
+        "roc_auc": 0.7327370764298763,
+        "pr_auc": 0.6970002490631341,
+        "f1": 0.5564062429410811,
+        "balanced_accuracy": 0.6389156289368126,
+        "brier": 0.26908611968256585,
+        "umbral": 0.3181818181818182,
+        "tn": 199939.0,
+        "fp": 45326.0,
+        "fn": 121597.0,
+        "tp": 104687.0,
+        "brier_sin_calibrar": 0.22054498765882105,
+        "auc_validacion": 0.755851744581415,
+        "modelo_final": true
+      },
+      "LightGBM persona + entidad (A+B)": {
+        "roc_auc": 0.7206121507868369,
+        "pr_auc": 0.6818104247098746,
+        "f1": 0.4831298875518997,
+        "balanced_accuracy": 0.6118921107084401,
+        "brier": 0.2977333959578272,
+        "umbral": 0.326205023761032,
+        "tn": 209785.0,
+        "fp": 35480.0,
+        "fn": 142911.0,
+        "tp": 83373.0,
+        "brier_sin_calibrar": 0.22577782579929853,
+        "auc_validacion": 0.7506389033776024,
+        "modelo_final": false
+      },
+      "LightGBM solo persona (A)": {
+        "roc_auc": 0.7323404540450102,
+        "pr_auc": 0.6953906298043077,
+        "f1": 0.5052287485459338,
+        "balanced_accuracy": 0.6334724797977561,
+        "brier": 0.2900576519088364,
+        "umbral": 0.31086142322097376,
+        "tn": 217763.0,
+        "fp": 27502.0,
+        "fn": 140505.0,
+        "tp": 85779.0,
+        "brier_sin_calibrar": 0.22222047983780455,
+        "auc_validacion": 0.7490474084288419,
+        "modelo_final": false
+      },
+      "LightGBM A + contexto del año (C)": {
+        "roc_auc": 0.7325032755772889,
+        "pr_auc": 0.6920083356630707,
+        "f1": 0.47177900150184315,
+        "balanced_accuracy": 0.6196799475181862,
+        "brier": 0.30168677914456343,
+        "umbral": 0.31086142322097376,
+        "tn": 219702.0,
+        "fp": 25563.0,
+        "fn": 148536.0,
+        "tp": 77748.0,
+        "brier_sin_calibrar": 0.2252923710169998,
+        "auc_validacion": NaN,
+        "modelo_final": false
+      },
+      "Persistencia, umbral fijo 9 meses": {
+        "roc_auc": 0.7235262150866856,
+        "pr_auc": 0.6760616126912804,
+        "f1": 0.6353111397923892,
+        "balanced_accuracy": 0.6745770048314806,
+        "brier": NaN,
+        "umbral": 9.0,
+        "tn": 187648.0,
+        "fp": 57617.0,
+        "fn": 94118.0,
+        "tp": 132166.0,
+        "brier_sin_calibrar": NaN,
+        "auc_validacion": 0.7120303427397439,
+        "modelo_final": false
+      }
+    },
+    "mejora_vs_persistencia": {
+      "Logística 5 variables": {
+        "Δ ROC-AUC": 0.012686989050115227,
+        "Δ PR-AUC": 0.0029378000562911843,
+        "Δ F1": -0.09532274610566494,
+        "Δ balanced acc.": -0.041757629655216344
+      },
+      "Logística": {
+        "Δ ROC-AUC": 0.006699544307221195,
+        "Δ PR-AUC": 0.011140482212548708,
+        "Δ F1": -0.03541240947344715,
+        "Δ balanced acc.": -0.024366382403040343
+      },
+      "Random Forest": {
+        "Δ ROC-AUC": 0.009210861343190713,
+        "Δ PR-AUC": 0.02093863637185367,
+        "Δ F1": -0.069857570549554,
+        "Δ balanced acc.": -0.03310577438774498
+      },
+      "LightGBM persona + entidad (A+B)": {
+        "Δ ROC-AUC": -0.00291406429984864,
+        "Δ PR-AUC": 0.005748812018594229,
+        "Δ F1": -0.14313392593873542,
+        "Δ balanced acc.": -0.06012929261611755
+      },
+      "LightGBM solo persona (A)": {
+        "Δ ROC-AUC": 0.008814238958324672,
+        "Δ PR-AUC": 0.019329017113027258,
+        "Δ F1": -0.12103506494470129,
+        "Δ balanced acc.": -0.038548923526801504
+      },
+      "LightGBM A + contexto del año (C)": {
+        "Δ ROC-AUC": 0.008977060490603317,
+        "Δ PR-AUC": 0.01594672297179034,
+        "Δ F1": -0.15448481198879194,
+        "Δ balanced acc.": -0.052341455806371395
+      },
+      "Días ya firmados para t+1": {
+        "Δ ROC-AUC": 0.012459988730725735,
+        "Δ PR-AUC": 0.016249338788372092,
+        "Δ F1": 0.013335040655330421,
+        "Δ balanced acc.": 0.008690396610287476
+      }
+    },
+    "prob_media_predicha_vs_tasa_real_prueba": {
+      "prob_media_calibrada": 0.24197970284259854,
+      "prob_media_sin_calibrar": 0.3769546067099633,
+      "tasa_real": 0.47987377769860606
+    },
+    "riesgo_2024_2025_parquet": "id_persona, prob (sin calibrar, modelo final), decil (1 = mayor riesgo)",
+    "importancia_gain_top10": {
+      "meses_cubiertos": 0.4158636337734975,
+      "dias_sin_contrato_al_cierre": 0.18319143918697955,
+      "ent_renov_rel": 0.10026947027096317,
+      "ent_meses_media": 0.03741260901489236,
+      "departamento_modal": 0.03670251859412092,
+      "cubierto_al_cierre": 0.029856389012477526,
+      "mes_inicio_primer_contrato": 0.027236016013457497,
+      "sector_modal": 0.027110734132463635,
+      "ent_hist_log_n": 0.026145971022484102,
+      "log_valor_total_smmlv": 0.025997692232487112
+    },
+    "shap_top10": {
+      "meses_cubiertos": 0.2248438463197148,
+      "dias_sin_contrato_al_cierre": 0.14787443276305867,
+      "ent_renov_rel": 0.09724370811538605,
+      "cubierto_al_cierre": 0.044560394523398265,
+      "departamento_modal": 0.037025113930140956,
+      "ent_meses_media": 0.03285433017958504,
+      "sector_modal": 0.03250085125458001,
+      "log_valor_total_smmlv": 0.03235840088083673,
+      "mes_inicio_primer_contrato": 0.02790057433958255,
+      "ent_hist_log_n": 0.02615967500681017
+    },
+    "sensibilidad_compromisos_t1": {
+      "auc_sin_compromisos": 0.7206121507868369,
+      "auc_con_compromisos": 0.7380271956213862,
+      "pr_auc_con_compromisos": 0.7109984943148474,
+      "auc_regla_solo_dias_firmados": 0.7359862038174113,
+      "pct_test_con_dias_firmados_t1": 0.10374531596928421
+    },
+    "desempeno_por_grupo": [
+      {
+        "grupo": "genero=Hombre",
+        "n": 165475,
+        "tasa_real": 0.44803142468650853,
+        "prob_media": 0.3457354996063066,
+        "roc_auc": 0.7194554428600672
+      },
+      {
+        "grupo": "genero=Mujer",
+        "n": 212300,
+        "tasa_real": 0.4589448893075836,
+        "prob_media": 0.36025800907122585,
+        "roc_auc": 0.7198182258981973
+      },
+      {
+        "grupo": "genero=No Definido",
+        "n": 93216,
+        "tasa_real": 0.584577754891864,
+        "prob_media": 0.4706215851206133,
+        "roc_auc": 0.7549121623119659
+      },
+      {
+        "grupo": "orden=Nacional",
+        "n": 177286,
+        "tasa_real": 0.5165551707410625,
+        "prob_media": 0.4957339169293406,
+        "roc_auc": 0.7291453165329207
+      },
+      {
+        "grupo": "orden=Territorial",
+        "n": 294263,
+        "tasa_real": 0.4577741680061713,
+        "prob_media": 0.3053930825239375,
+        "roc_auc": 0.7546217442508921
+      }
+    ],
+    "convencion_deciles": "D1 = mayor riesgo (menor probabilidad de continuidad)",
+    "deciles_riesgo": {
+      "1": {
+        "personas": 47155.0,
+        "prob_media": 0.056942534932912424,
+        "prob_calibrada_media": 0.04006730063982117,
+        "tasa_real": 0.08696850811154702,
+        "meses_2024": 3.6098809124425726,
+        "meses_2025": 2.170402650541859,
+        "no_aparece_2025": 0.6792916975930442,
+        "tasa_real_persistencia": 0.22120665889089175
+      },
+      "2": {
+        "personas": 47155.0,
+        "prob_media": 0.11147397004377521,
+        "prob_calibrada_media": 0.06409799319312638,
+        "tasa_real": 0.22481179090234332,
+        "meses_2024": 4.945166880761215,
+        "meses_2025": 4.6202869871002505,
+        "no_aparece_2025": 0.39442264871169547,
+        "tasa_real_persistencia": 0.2372600996712968
+      },
+      "3": {
+        "personas": 47155.0,
+        "prob_media": 0.17274157753283817,
+        "prob_calibrada_media": 0.09733361622407351,
+        "tasa_real": 0.35902873502279714,
+        "meses_2024": 5.813284059719342,
+        "meses_2025": 6.073735378662325,
+        "no_aparece_2025": 0.2584879652210794,
+        "tasa_real_persistencia": 0.30143144947513517
+      },
+      "4": {
+        "personas": 47155.0,
+        "prob_media": 0.24510662474727807,
+        "prob_calibrada_media": 0.13952124103992106,
+        "tasa_real": 0.4255964372813063,
+        "meses_2024": 6.344985059734987,
+        "meses_2025": 6.351070369794745,
+        "no_aparece_2025": 0.25821227865549784,
+        "tasa_real_persistencia": 0.34265719435902875
+      },
+      "5": {
+        "personas": 47155.0,
+        "prob_media": 0.3328930149628339,
+        "prob_calibrada_media": 0.1898869777296491,
+        "tasa_real": 0.5022160958540982,
+        "meses_2024": 7.100885638746305,
+        "meses_2025": 6.884370314744583,
+        "no_aparece_2025": 0.22561764394019723,
+        "tasa_real_persistencia": 0.41111228925882726
+      },
+      "6": {
+        "personas": 47154.0,
+        "prob_media": 0.4237920880398514,
+        "prob_calibrada_media": 0.24095122931320012,
+        "tasa_real": 0.5377274462399796,
+        "meses_2024": 7.347143680594523,
+        "meses_2025": 7.364718924468414,
+        "no_aparece_2025": 0.17319845612249227,
+        "tasa_real_persistencia": 0.49586461381855196
+      },
+      "7": {
+        "personas": 47155.0,
+        "prob_media": 0.49462961627001967,
+        "prob_calibrada_media": 0.2988095082032687,
+        "tasa_real": 0.5438235605980278,
+        "meses_2024": 7.408618594763345,
+        "meses_2025": 7.1480805213933065,
+        "no_aparece_2025": 0.22443007104230728,
+        "tasa_real_persistencia": 0.6167956738415863
+      },
+      "8": {
+        "personas": 47155.0,
+        "prob_media": 0.5588613342427522,
+        "prob_calibrada_media": 0.35666886296529554,
+        "tasa_real": 0.6171137737249497,
+        "meses_2024": 8.55630559143112,
+        "meses_2025": 7.805470446487321,
+        "no_aparece_2025": 0.18884529742339096,
+        "tasa_real_persistencia": 0.6922065528575972
+      },
+      "9": {
+        "personas": 47155.0,
+        "prob_media": 0.632446079806407,
+        "prob_calibrada_media": 0.4310585886054174,
+        "tasa_real": 0.6764712119605556,
+        "meses_2024": 10.174089982287226,
+        "meses_2025": 8.47212065136398,
+        "no_aparece_2025": 0.1342593574382356,
+        "tasa_real_persistencia": 0.7252465274096066
+      },
+      "10": {
+        "personas": 47155.0,
+        "prob_media": 0.740660219787455,
+        "prob_calibrada_media": 0.5614016887017251,
+        "tasa_real": 0.8249814441734705,
+        "meses_2024": 11.214124330121626,
+        "meses_2025": 9.70943890957103,
+        "no_aparece_2025": 0.06529530272505567,
+        "tasa_real_persistencia": 0.754957056515746
+      }
+    }
+  }
+}

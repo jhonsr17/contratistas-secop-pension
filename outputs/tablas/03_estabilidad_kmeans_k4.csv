@@ -1,0 +1,6 @@
+prueba,inercia,ARI_vs_solucion
+semilla 123 (n_init=20),6267858.229338286,0.9994464700059777
+semilla 2024 (n_init=20),6267852.7668538205,0.9986882564706103
+submuestra 50% (n_init=10),,0.9971568460702099
+semilla 2024 con n_init=1 (referencia),6398158.190664875,0.44077543624899534
+"solución elegida (semilla 42, n_init=20)",6267856.779819838,1.0

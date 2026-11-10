@@ -1,0 +1,10 @@
+# Datos (se descargan con scripts/descargar_secop.py)
+data/processed/*.parquet
+data/raw/
+data_intermedia/
+# Clave de anonimización: NUNCA subir
+.sal_NO_COMPARTIR.txt
+*.sal*
+__pycache__/
+.ipynb_checkpoints/
+logs/

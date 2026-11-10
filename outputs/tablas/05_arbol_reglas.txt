@@ -1,0 +1,31 @@
+Árbol de decisión (profundidad 3, class_weight=balanced) para asignar el tipo de trayectoria
+Exactitud en prueba: 0.698 · exactitud balanceada: 0.724
+
+|--- n_entidades <= 1.42
+|   |--- meses_contrato_por_anio <= 5.04
+|   |   |--- meses_contrato_por_anio <= 2.05
+|   |   |   |--- class: Ocasionales
+|   |   |--- meses_contrato_por_anio >  2.05
+|   |   |   |--- class: Ocasionales
+|   |--- meses_contrato_por_anio >  5.04
+|   |   |--- meses_contrato_por_anio <= 8.98
+|   |   |   |--- class: Intermitentes
+|   |   |--- meses_contrato_por_anio >  8.98
+|   |   |   |--- class: Estables
+|--- n_entidades >  1.42
+|   |--- n_entidades <= 1.58
+|   |   |--- meses_contrato_por_anio <= 5.00
+|   |   |   |--- class: Multientidad
+|   |   |--- meses_contrato_por_anio >  5.00
+|   |   |   |--- class: Multientidad
+|   |--- n_entidades >  1.58
+|   |   |--- meses_contrato_por_anio <= 1.34
+|   |   |   |--- class: Multientidad
+|   |   |--- meses_contrato_por_anio >  1.34
+|   |   |   |--- class: Multientidad
+
+Reglas simplificadas:
+SI entidades al año ≤ 1,42 Y meses de contrato al año ≤ 5,04 → Ocasionales
+SI entidades al año ≤ 1,42 Y 5,04 < meses de contrato al año ≤ 8,98 → Intermitentes
+SI entidades al año ≤ 1,42 Y meses de contrato al año > 8,98 → Estables
+SI entidades al año > 1,42 → Multientidad
