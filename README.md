@@ -6,6 +6,10 @@ Proyecto final de Machine Learning, Matemáticas Aplicadas y Ciencias de la Comp
 
 **Simulador en línea:** https://jhonsr17.github.io/contratistas-secop-pension/simulador/ (código en [`simulador/index.html`](simulador/index.html)). Escribes cuántos meses al año tienes contrato y te dice a qué edad completarías las semanas que exige Colpensiones.
 
+[![Demo del simulador](simulador/demo_simulador_poster.png)](simulador/demo_simulador.mp4)
+
+*Demo de 40 s ([`simulador/demo_simulador.mp4`](simulador/demo_simulador.mp4)): caso real intermitente (65 años), el mismo caso con 9 meses de contrato al año (50,6), un caso ocasional (117) y el contratista típico de 2024 (62,8).*
+
 ---
 
 ## Hallazgos principales
